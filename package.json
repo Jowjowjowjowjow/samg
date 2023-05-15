@@ -2,9 +2,12 @@
   "name": "sistema-apoio-bsi",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://Jowjowjowjowjow.github.io/samg/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
@@ -24,6 +27,7 @@
     "@vue/eslint-config-prettier": "^7.0.0",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.7.1",
     "vite": "^4.0.0"
   }
