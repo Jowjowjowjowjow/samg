@@ -1,6 +1,9 @@
 <template>
     <v-container fluid class="historico">
         <v-row>
+            <v-card-subtitle>AVISO: este simulador foi elaborado apenas com propósitos informacionais e não deve ser considerado como uma garantia de situação após a migração curricular. Leia os anexos do Projeto Pedagógico de Curso (PPC) e as comunicações oficiais da Coordenação para mais informações.</v-card-subtitle>
+        </v-row>
+        <v-row>
             <v-col cols="12">
                 <v-file-input label="Carregar histórico" variant="solo" ref="historico"
                     @change="lerPlanilhaDisciplinas"></v-file-input>
