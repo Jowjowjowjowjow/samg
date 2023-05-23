@@ -173,24 +173,33 @@ export default {
             const naoAproveitadas = [];
             const materiasDispensadas = this.calculaDispensas();
 
-            const equivalencias = this.historico.map(disciplina => {
+            const equivalencias = [];
+            this.historico.map(disciplina => {
                 const codigo = disciplina.Codigo;
-                const disciplinaEquivalente = this.equivalencias.find(item => item.codigoCurriculoAntigo === codigo);
+                const disciplinasEquivalentes = this.equivalencias.filter(item => item.codigoCurriculoAntigo === codigo);
 
-                if (disciplinaEquivalente && disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) {
-                    return { ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo }
+                if (disciplinasEquivalentes.length) {
+                    disciplinasEquivalentes.forEach(disciplinaEquivalente => {
+                        if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa"))) {
+                            equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo })
+                        }
+                    })
+                } else {
+                    if (disciplina.Tipo !== "Eletiva" && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && (!materiasDispensadas[1].some(codigo => codigo === disciplina.Codigo))) {
+                        naoAproveitadas.push(disciplina);
+                    }
                 }
-
-                if (disciplina.Tipo !== "Eletiva" && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && !materiasDispensadas[1].some(codigo => codigo === disciplina.Codigo)) {
-                    naoAproveitadas.push(disciplina);
-                }
-
             }).filter(disciplina => disciplina) // esse filter faz retornar apenas valores diferentes de undefined ou null
 
-            const optativasGradeNova = this.disciplinasOptativasCurriculoNovo.map(optativa => {
-                const equivalente = equivalencias.find(equivalencia => equivalencia.Codigo === optativa.Codigo);
+            const optativasGradeNova = [];
+            this.disciplinasOptativasCurriculoNovo.map(optativa => {
+                const equivalentes = equivalencias.filter(equivalencia => equivalencia.Codigo === optativa.Codigo);
 
-                if (equivalente) return { ...optativa, Situacao: equivalente.Situacao, Sigla: optativa.Sigla || equivalente.Sigla }
+                if (equivalentes.length) {
+                    equivalentes.forEach(equivalente => {
+                        optativasGradeNova.push({ ...optativa, Situacao: equivalente.Situacao, Sigla: optativa.Sigla || equivalente.Sigla })
+                    })
+                }
             }).filter(disciplina => disciplina)
 
             if (eletivas.length) {
