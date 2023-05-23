@@ -55,6 +55,8 @@ export default {
                 case "reprovado sem nota": return "orange";
                 case "reprovado por falta": return "red";
                 case "aprovado sem nota": return "green";
+                case "dispensa sem nota": return "yellow";
+                case "dispensa com nota": return "yellow";
                 case "matrícula": return '#F5F5F5';
                 default: return '#F5F5F5';
             }

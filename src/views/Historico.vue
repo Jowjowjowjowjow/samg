@@ -1,7 +1,9 @@
 <template>
     <v-container fluid class="historico">
         <v-row>
-            <v-card-subtitle>AVISO: este simulador foi elaborado apenas com propósitos informacionais e não deve ser considerado como uma garantia de situação após a migração curricular. Leia os anexos do Projeto Pedagógico de Curso (PPC) e as comunicações oficiais da Coordenação para mais informações.</v-card-subtitle>
+            <v-card-subtitle>AVISO: este simulador foi elaborado apenas com propósitos informacionais e não deve ser
+                considerado como uma garantia de situação após a migração curricular. Leia os anexos do Projeto Pedagógico
+                de Curso (PPC) e as comunicações oficiais da Coordenação para mais informações.</v-card-subtitle>
         </v-row>
         <v-row>
             <v-col cols="12">
@@ -153,13 +155,20 @@ export default {
 
         fazEquivalencias(obrigatorias, optativas, eletivas) {
             const naoAproveitadas = [];
-            const equivalencias = this.equivalencias.map(disciplina => {
-                const codigo = disciplina.codigoCurriculoAntigo;
-                const disciplinaHistorico = this.historico.find(item => item.Codigo === codigo);
+            const materiasDispensadas = this.calculaDispensas();
+            console.log(this.calculaDispensas());
+            const equivalencias = this.historico.map(disciplina => {
+                const codigo = disciplina.Codigo;
+                const disciplinaEquivalente = this.equivalencias.find(item => item.codigoCurriculoAntigo === codigo);
 
-                if (disciplinaHistorico && disciplinaHistorico?.Situacao.toLowerCase().includes("aprovado") || disciplinaHistorico?.Situacao.toLowerCase().includes("dispensa")) {
-                    return { ...disciplinaHistorico, Codigo: disciplina.codigoCurriculoNovo }
+                if (disciplinaEquivalente && disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) {
+                    return { ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo }
                 }
+
+                if (disciplina.Tipo !== "Eletiva" && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && !materiasDispensadas[1].some(codigo => codigo === disciplina.Codigo)) {
+                    naoAproveitadas.push(disciplina);
+                }
+
             }).filter(disciplina => disciplina) // esse filter faz retornar apenas valores diferentes de undefined ou null
 
             const optativasGradeNova = this.disciplinasOptativasCurriculoNovo.map(optativa => {
@@ -179,6 +188,8 @@ export default {
             }
 
             this.progressoAlunoGradeNova = this.gradeNova.map(item => {
+                if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return {...item, Situacao: "Dispensa sem nota"}
+
                 const disciplina = equivalencias.find(equivalencia => equivalencia.Codigo === item.Codigo)
 
                 if (item.Tipo.includes("Optativa") && item.Codigo.includes("OPT") && optativasGradeNova.length) {
@@ -189,58 +200,29 @@ export default {
                 return { ...item, Situacao: item.Situacao || "Matrícula" }
             })
 
+            this.naoEquivalentes = [...naoAproveitadas]
+            console.log(naoAproveitadas);
         },
 
         calculaDispensas() {
-            const disciplinas = this.historico.filter(item => item.Nome.toLowerCase().includes("ace"));
-            const TPD = this.historico.find(item => item.codigo === "HTD0058");
+            const disciplinas = this.historico.filter(item => item.Sigla.toLowerCase().includes("ace"));
+            const TPD = this.historico.find(item => item.Codigo === "HTD0058");
             const dispensas = [];
-
-            if (disciplinas.length >= 3) {
-                for (let i = 1; i <= 2; i++) {
-                    dispensas.push({
-                        Codigo: disciplinas[i].codigo,
-                        Nome: "Atividade de Extensão",
-                        CargaHoraria: 150,
-                        Creditos: null,
-                        PeriodoRecomendado: 8,
-                        Sigla: "AE",
-                        Tipo: "Obrigatória"
-                    })
-
-                }
-            } else if (disciplinas.length == 2) {
-                dispensas.push({
-                    Codigo: disciplinas[i].codigo,
-                    Nome: "Atividade de Extensão",
-                    CargaHoraria: 150,
-                    Creditos: null,
-                    PeriodoRecomendado: 8,
-                    Sigla: "AE",
-                    Tipo: "Obrigatória"
-                })
-            } else if (disciplinas.length === 1 && TPD) {
-                dispensas.push({
-                    Codigo: disciplinas[i].codigo,
-                    Nome: "Atividade de Extensão",
-                    CargaHoraria: 150,
-                    Creditos: null,
-                    PeriodoRecomendado: 8,
-                    Sigla: "AE",
-                    Tipo: "Obrigatória"
-                })
-            } if (disciplinas.some(disciplina => disciplina.Codigo === "TIN0056" || disciplina.Codigo === "TIN0057")) {
-                dispensas.push({
-                    Codigo: "TIN0056-ACE",
-                    Nome: "ACE ?",
-                    CargaHoraria: 90,
-                    Creditos: null,
-                    PeriodoRecomendado: 8,
-                    Sigla: "ACE",
-                    Tipo: "Obrigatória"
-                })
+            const utilizadas = [];
+            if(disciplinas.length === 4){
+                dispensas.push("TIN0151", "TIN0152", "TIN9999" )
+                utilizadas.push(disciplinas[0].Codigo, disciplinas[1].Codigo, disciplinas[2].Codigo, disciplinas[3].Codigo)
+            } else if(disciplinas.length == 3) {
+                dispensas.push("TIN0151", "TIN0152")
+                utilizadas.push(disciplinas[0].Codigo, disciplinas[1].Codigo, disciplinas[2].Codigo)
+            } else if(disciplinas.length == 2 && disciplinas.some(disciplina => disciplina.Codigo === "TIN0156" || disciplina.Codigo === "TIN0157") && TPD){
+                dispensas.push("TIN0151", "TIN9999")
+                utilizadas.push(disciplinas[0].Codigo, disciplinas[1].Codigo, TPD.Codigo)
+            } else if (disciplinas.length >= 1 && TPD) {
+                dispensas.push("TIN0151")
+                utilizadas.push(...disciplinas.map(disciplina => disciplina.Codigo), TPD.Codigo)
             }
-            return dispensas
+            return [dispensas, utilizadas]
         },
 
         pegaDisciplinasOptativasCurriculoAntigo() {
