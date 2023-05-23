@@ -10,7 +10,7 @@
 
             <v-row v-if="disciplinasCursadas.length" v-for="disciplina in disciplinasCursadas" :key="disciplina.Codigo">
                 <CaixaDisciplina v-if="disciplina.PeriodoRecomendado === i" @click="disciplinaSelecionada = disciplina"
-                    :disciplina="disciplina" class="mb-4" :status="status" :cor="corPorStatus(disciplina.Situacao)" :eixo="eixoCor[disciplina?.Eixo]"/>
+                    :disciplina="disciplina" class="mb-4" :status="status(disciplina)" :cor="eixoCor[disciplina?.Eixo]" />
             </v-row>
             <v-row v-else v-for="disciplina in disciplinasObrigatorias" :key="disciplina.Codigo + 'index'">
                 <CaixaDisciplina v-if="disciplina.PeriodoRecomendado === i" @click="disciplinaSelecionada = disciplina"
@@ -76,17 +76,17 @@ export default {
                 default: return '#F5F5F5';
             }
         },
-        status(situacao) {
-            if (!situacao) return false;
-            switch (situacao.toLowerCase()) {
-                case "aprovado": return true;
-                case "reprovado sem nota": return false;
-                case "reprovado por falta": return false;
-                case "aprovado sem nota": return true;
-                case "dispensa sem nota": return true;
-                case "dispensa com nota": return true;
-                case "matrícula": return false;
-                default: return false;
+        status(disciplina) {
+            if (!disciplina || !disciplina.Situacao) return { ver: "uncheck", cor: "" };
+            switch (disciplina.Situacao.toLowerCase()) {
+                case "aprovado": return { ver: "check", cor: "green" };
+                case "reprovado sem nota": return { ver: "uncheck", cor: "" };
+                case "reprovado por falta": return { ver: "uncheck", cor: "" };
+                case "aprovado sem nota": return { ver: "check", cor: "green" };
+                case "dispensa sem nota": return { ver: "check", cor: "yellow" };
+                case "dispensa com nota": return { ver: "check", cor: "yellow" };
+                case "matrícula": return { ver: "uncheck", cor: "" };
+                default: return { ver: "uncheck", cor: "" };
             }
         }
     },

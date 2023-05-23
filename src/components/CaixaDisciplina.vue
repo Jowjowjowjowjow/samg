@@ -1,6 +1,6 @@
 <template>
-    <v-card class="pa-2 largura-caixa" :color="corFundoCartao">
-        <v-icon v-if="status" icon="$check" color="#1B5E20"></v-icon>
+    <v-card class="pa-2 largura-caixa" :color="cor">
+        <v-icon :icon="status.ver === 'check' ? '$check' : '$unCheck'" :color="status.cor" class="icone"></v-icon>
         <v-card-title>{{ disciplina.Sigla }}</v-card-title>
         <v-card-subtitle>{{ disciplina.codigo }}</v-card-subtitle>
     </v-card>
@@ -14,7 +14,7 @@ export default {
             required: true,
             default: () => { }
         },
-        status: { type: Boolean, default: false },
+        status: { type: Object, default: () => ({ ver: false, cor: "" }) },
         cor: { type: String, default: () => '' },
         eixo: { type: String, default: () => '' }
     },
@@ -29,5 +29,10 @@ export default {
 <style>
 .largura-caixa {
     width: 120px;
+}
+
+.icone {
+    position: absolute !important;
+    right: 4px;
 }
 </style>
