@@ -3,18 +3,18 @@
         <v-col cols="12" class="d-flex align-center">
             <v-card-title>Currículo novo</v-card-title>
             <v-spacer></v-spacer>
-            <v-icon :icon="manipulaOlho" @click="ver = !ver"/>
+            <v-icon :icon="manipulaOlho" @click="ver = !ver" />
         </v-col>
         <v-col v-show="ver" v-for="i in periodos" :key="i" class="pa-6" :class="{ 'borda-coluna': i < 8 }">
             <div class="mb-8 borda-linha">{{ `${i}° período` }}</div>
 
             <v-row v-if="disciplinasCursadas.length" v-for="disciplina in disciplinasCursadas" :key="disciplina.Codigo">
                 <CaixaDisciplina v-if="disciplina.PeriodoRecomendado === i" @click="disciplinaSelecionada = disciplina"
-                    :disciplina="disciplina" class="mb-4" :cor="corPorStatus(disciplina.Situacao)" />
+                    :disciplina="disciplina" class="mb-4" :cor="corPorStatus(disciplina.Situacao)" :eixo="eixoCor[disciplina?.Eixo]"/>
             </v-row>
             <v-row v-else v-for="disciplina in disciplinasObrigatorias" :key="disciplina.Codigo + 'index'">
                 <CaixaDisciplina v-if="disciplina.PeriodoRecomendado === i" @click="disciplinaSelecionada = disciplina"
-                    :disciplina="disciplina" class="mb-4" cor="#F5F5F5" />
+                    :disciplina="disciplina" class="mb-4" :cor="eixoCor[disciplina?.Eixo]" />
             </v-row>
         </v-col>
         <v-dialog v-if="disciplinaSelecionada !== null" v-model="disciplinaSelecionada">
@@ -26,9 +26,23 @@
 import curriculoNovoObrigatorias from '../assets/Disciplinas Obrigatórias - Currículo novo.json';
 import CaixaDisciplina from './CaixaDisciplina.vue';
 import DetalhesDisciplina from './DetalhesDisciplina.vue';
+
+const EIXO_COR = {
+    "Atividades complementares": "#78909C",
+    "Atividades de extensão": "#6D4C41",
+    "Trabalho de conclusão de curso": "#00ACC1",
+    "Infraestrutura em SI": "#F06292",
+    "Engenharia de Dados e Informação": "#81C784",
+    "Desenvolvimento de Software para SI (Engenharia de Software)": "#5C6BC0",
+    "Desenvolvimento de Software para SI (Programação e Algoritmos)": "#64B5F6",
+    "Gestão de SI e TI, Empreendedorismo e Inovação": "#7E57C2",
+    "Visão Sistêmica (Fundamentos de Matemática)": "#FFCC80",
+    "Visão Sistêmica (Sistemas de Informação)": "#FFEE58"
+}
+
+
 export default {
     name: "curriculo-novo",
-
     props: {
         disciplinasCursadas: {
             required: true,
@@ -40,7 +54,8 @@ export default {
         disciplinasObrigatorias: curriculoNovoObrigatorias.CurriculoNovo,
         disciplinaSelecionada: null,
         periodos: 8,
-        ver: true
+        ver: true,
+        eixoCor: EIXO_COR
     }),
     computed: {
         manipulaOlho() {

@@ -1,5 +1,5 @@
 <template>
-    <v-card class="pa-2 largura-caixa" :color="cor">
+    <v-card class="pa-2 largura-caixa" :color="cor" :style="{ border: `4px solid ${eixo}` }">
         <v-card-title>{{ disciplina.Sigla }}</v-card-title>
         <v-card-subtitle>{{ disciplina.codigo }}</v-card-subtitle>
         <!-- <v-card-actions>
@@ -16,19 +16,20 @@ export default {
             required: true,
             default: () => { }
         },
-        cor: { type: String, default: () => '' }
+        cor: { type: String, default: () => '' },
+        eixo: { type: String, default: () => '' }
     },
     computed: {
         corFundoCartao() {
             if (this.status === 'REP') return 'red';
             else if (this.status === 'APV') return 'green';
-            else return ;
-        }
+            else return;
+        },
     }
 }
 </script>
 <style>
-    .largura-caixa{
-        width: 120px;
-    }
+.largura-caixa {
+    width: 120px;
+}
 </style>
