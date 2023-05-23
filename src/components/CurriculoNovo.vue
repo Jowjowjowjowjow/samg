@@ -10,7 +10,7 @@
 
             <v-row v-if="disciplinasCursadas.length" v-for="disciplina in disciplinasCursadas" :key="disciplina.Codigo">
                 <CaixaDisciplina v-if="disciplina.PeriodoRecomendado === i" @click="disciplinaSelecionada = disciplina"
-                    :disciplina="disciplina" class="mb-4" :cor="corPorStatus(disciplina.Situacao)" :eixo="eixoCor[disciplina?.Eixo]"/>
+                    :disciplina="disciplina" class="mb-4" :status="status" :cor="corPorStatus(disciplina.Situacao)" :eixo="eixoCor[disciplina?.Eixo]"/>
             </v-row>
             <v-row v-else v-for="disciplina in disciplinasObrigatorias" :key="disciplina.Codigo + 'index'">
                 <CaixaDisciplina v-if="disciplina.PeriodoRecomendado === i" @click="disciplinaSelecionada = disciplina"
@@ -76,6 +76,19 @@ export default {
                 default: return '#F5F5F5';
             }
         },
+        status(situacao) {
+            if (!situacao) return false;
+            switch (situacao.toLowerCase()) {
+                case "aprovado": return true;
+                case "reprovado sem nota": return false;
+                case "reprovado por falta": return false;
+                case "aprovado sem nota": return true;
+                case "dispensa sem nota": return true;
+                case "dispensa com nota": return true;
+                case "matrícula": return false;
+                default: return false;
+            }
+        }
     },
     components: { DetalhesDisciplina, CaixaDisciplina }
 }
