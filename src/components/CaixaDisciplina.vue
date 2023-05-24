@@ -20,7 +20,7 @@ export default {
     },
     computed: {
         corFundoCartao() {
-            if (this.cor === "#F5F5F5") return this.eixo;
+            if (this.cor === "#BDBDBD") return this.eixo;
             else return this.cor;
         },
     }
