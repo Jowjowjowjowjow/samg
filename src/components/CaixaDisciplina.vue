@@ -26,7 +26,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .largura-caixa {
     width: 120px;
 }
@@ -34,5 +34,9 @@ export default {
 .icone {
     position: absolute !important;
     right: 4px;
+}
+
+.v-card:hover {
+   filter: brightness(70%)!important;
 }
 </style>
