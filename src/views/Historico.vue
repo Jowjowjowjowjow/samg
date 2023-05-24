@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="historico">
         <v-row>
-            <strong class="warning text-h4 text-center">AVISO: este simulador foi elaborado apenas com propósitos informacionais e não deve ser
+            <strong class="warning text-h5 text-center">AVISO: este simulador foi elaborado apenas com propósitos informacionais e não deve ser
                 considerado como uma garantia de situação após a migração curricular. Leia os anexos do Projeto Pedagógico
                 de Curso (PPC) e as comunicações oficiais da Coordenação para mais informações.</strong>
         </v-row>
@@ -29,11 +29,8 @@
                             <p>Nome: {{ disciplina.Nome }}</p>
                             <p>Código: {{ disciplina.Codigo }}</p>
                         </v-list-item>
-                        <p class="text-center warning font-weight-bold">Consulte seu professor tutor para saber a situação das disciplinas acima e/ou consulte o arquivo "Reforma: equivalências e dispensas" disponível no classroom Reforma Curricular BSI</p>
+                        <p class="text-center warning font-weight-bold">Consulte seu professor tutor para saber a situação das disciplinas acima e/ou <a class="text-center warning font-weight-bold link-equivalencias" href="https://docs.google.com/spreadsheets/d/1sy8dg5g71ShyxwP7jZld7-yV3u0GTqqfIPGLc33NWTA/edit" target="_blank">consulte o arquivo "Reforma: equivalências e dispensas" disponível no classroom Reforma Curricular BSI</a></p>
                     </v-list>
-                    <a class="d-flex align-self-center mb-2 link-equivalencias" href="https://docs.google.com/spreadsheets/d/1sy8dg5g71ShyxwP7jZld7-yV3u0GTqqfIPGLc33NWTA/edit" target="_blank">
-                        Listagem de disciplinas equivalentes
-                    </a>
                 </v-card>
             </v-dialog>
         </v-row>
@@ -281,11 +278,12 @@ export default {
 }
 
 .link-equivalencias{
-    color: #605a5a;
+    text-decoration: underline;
 }
+
 .link-equivalencias:hover {
     text-decoration: underline;
-    background: none;
+    background: #1a1a1a;
 }
 
 </style>
