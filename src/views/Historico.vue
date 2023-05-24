@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="historico">
         <v-row>
-            <strong class="warning">AVISO: este simulador foi elaborado apenas com propósitos informacionais e não deve ser
+            <strong class="warning text-h4 text-center">AVISO: este simulador foi elaborado apenas com propósitos informacionais e não deve ser
                 considerado como uma garantia de situação após a migração curricular. Leia os anexos do Projeto Pedagógico
                 de Curso (PPC) e as comunicações oficiais da Coordenação para mais informações.</strong>
         </v-row>
