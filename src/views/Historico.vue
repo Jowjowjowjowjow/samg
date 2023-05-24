@@ -31,6 +31,9 @@
                         </v-list-item>
                         <p class="text-center warning font-weight-bold">Consulte seu professor tutor para saber a situação das disciplinas acima e/ou consulte o arquivo "Reforma: equivalências e dispensas" disponível no classroom Reforma Curricular BSI</p>
                     </v-list>
+                    <a class="d-flex align-self-center mb-2 link-equivalencias" href="https://docs.google.com/spreadsheets/d/1sy8dg5g71ShyxwP7jZld7-yV3u0GTqqfIPGLc33NWTA/edit" target="_blank">
+                        Listagem de disciplinas equivalentes
+                    </a>
                 </v-card>
             </v-dialog>
         </v-row>
@@ -276,4 +279,13 @@ export default {
 .warning {
     color: #EF5350;
 }
+
+.link-equivalencias{
+    color: #605a5a;
+}
+.link-equivalencias:hover {
+    text-decoration: underline;
+    background: none;
+}
+
 </style>
