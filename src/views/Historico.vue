@@ -26,8 +26,10 @@
                 <v-card flat>
                     <v-list>
                         <v-list-item v-for="disciplina in naoEquivalentes" :key="disciplina.Codigo">
-                            <span>Nome: {{ disciplina.Nome }}</span>
+                            <p>Nome: {{ disciplina.Nome }}</p>
+                            <p>Código: {{ disciplina.Codigo }}</p>
                         </v-list-item>
+                        <p class="text-center warning font-weight-bold">Consulte seu professor tutor para saber a situação das disciplinas acima e/ou consulte o arquivo "Reforma: equivalências e dispensas" disponível no classroom Reforma Curricular BSI</p>
                     </v-list>
                 </v-card>
             </v-dialog>
