@@ -11,7 +11,7 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
-import { mdiEye, mdiEyeOff  } from '@mdi/js'
+import { mdiEye, mdiEyeOff, mdiCheckCircle, mdiCheckCircleOutline, mdiSquare  } from '@mdi/js'
 
 const vuetify = createVuetify({
     components,
@@ -21,7 +21,10 @@ const vuetify = createVuetify({
         aliases: {
             ...aliases,
             eye: mdiEye,
-            offEye: mdiEyeOff
+            offEye: mdiEyeOff,
+            check: mdiCheckCircle,
+            unCheck: mdiCheckCircleOutline,
+            square: mdiSquare
         },
         sets: {
             mdi,

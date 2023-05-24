@@ -1,10 +1,8 @@
 <template>
     <v-card class="pa-2 largura-caixa" :color="cor">
+        <v-icon :icon="status.ver === 'check' ? '$check' : '$unCheck'" :color="status.cor" class="icone"></v-icon>
         <v-card-title>{{ disciplina.Sigla }}</v-card-title>
         <v-card-subtitle>{{ disciplina.codigo }}</v-card-subtitle>
-        <!-- <v-card-actions>
-            <v-btn color="indigo" variant="flat">Disciplinas compatíveis</v-btn>
-        </v-card-actions> -->
     </v-card>
 </template>
 <script>
@@ -16,19 +14,25 @@ export default {
             required: true,
             default: () => { }
         },
-        cor: { type: String, default: () => '' }
+        status: { type: Object, default: () => ({ ver: false, cor: "" }) },
+        cor: { type: String, default: () => '' },
+        eixo: { type: String, default: () => '' }
     },
     computed: {
         corFundoCartao() {
-            if (this.status === 'REP') return 'red';
-            else if (this.status === 'APV') return 'green';
-            else return ;
-        }
+            if (this.cor === "#BDBDBD") return this.eixo;
+            else return this.cor;
+        },
     }
 }
 </script>
 <style>
-    .largura-caixa{
-        width: 120px;
-    }
+.largura-caixa {
+    width: 120px;
+}
+
+.icone {
+    position: absolute !important;
+    right: 4px;
+}
 </style>

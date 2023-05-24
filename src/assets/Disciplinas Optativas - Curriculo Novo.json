@@ -1,643 +1,804 @@
 {
 "CurriculoNovoOptativas":[
  {
-  "Codigo": "TMP0035",
+  "Codigo": "TIN0238",
   "Nome": "Acessibilidade",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Conceitos básicos. Perfis de usuários. Visão. Audição. Analfabetismo funcional. Terceira idade. Deficiência física\/motora. Avaliação de interfaces. Acessibilização. Navegação acessível. Conteúdo acessível. Entrada de dados acessível.",
-  "PreRequisitos": "Interação Humano-Computador"
+  "PreRequisitos": "Interação Humano-Computador",
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "ACS"
  },
  {
-  "Codigo": "TMP0036",
+  "Codigo": "TIN0239",
   "Nome": "Cibercultura",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Pensamento interdisciplinar. Cibercultura e web na Sociedade. Web\n2.0 e software social. Cibercultura, tecnologia e vida social na cultura\ncontemporânea. Tecnologias da Informação e a web como ciência.\nGovernança na Internet (incluindo ética, privacidade e confiabilidade\nna web). Teorias da cibercultura."
+  "Ementa": "Pensamento interdisciplinar. Cibercultura e web na Sociedade. Web 2.0 e software social. Cibercultura, tecnologia e vida social na cultura contemporânea. Tecnologias da Informação e a web como ciência. Governança na Internet (incluindo ética, privacidade e confiabilidade na web). Teorias da cibercultura.",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "CBC"
  },
  {
-  "Codigo": "TMP0037",
+  "Codigo": "TIN0240",
   "Nome": "Ciência de redes",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Fundamentos de ciência de redes. Tipos de redes reais. Caracterização estrutural de redes. Fenômenos em redes: efeito mundo pequeno, redes livres de escala, clusterização, comunidades. Modelos\naleatórios de redes: Erdős–Rényi, Barabási–Albert, Watts–Strogatz.\nProcessos sobre redes. Redes temporais. Aplicações.",
-  "PreRequisitos": "Estruturas de dados, Probabilidade"
+  "Ementa": "Fundamentos de ciência de redes. Tipos de redes reais. Caracterização estrutural de redes. Fenômenos em redes: efeito mundo pequeno, redes livres de escala, clusterização, comunidades. Modelos aleatórios de redes: Erdős–Rényi, Barabási–Albert, Watts–Strogatz. Processos sobre redes. Redes temporais. Aplicações.",
+  "PreRequisitos": "Estruturas de dados, Probabilidade",
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "CDR"
  },
  {
   "Codigo": "TIN0106",
   "Nome": "Desenvolvimento de páginas web",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Linguagens para escrita de páginas web, multimídia para web, e pro- jeto web (webdesign)."
+  "Ementa": "Linguagens para escrita de páginas web, multimídia para web, e pro- jeto web (webdesign).",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "DPW"
  },
  {
-  "Codigo": "TMP0038",
+  "Codigo": "TIN0241",
   "Nome": "Informática na Educação",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Histórico, evolução e tendências. Teorias de Aprendizagem e Métodos Educacionais. Sistemas computacionais voltados para a educação (Tutoriais (CAI), Software educacional, Jogos, Simuladores, Editores, Tecnologias da Informação e Comunicação (TICs). Educação\na Distância (EAD), Redes Sociais."
+  "Ementa": "Histórico, evolução e tendências. Teorias de Aprendizagem e Métodos Educacionais. Sistemas computacionais voltados para a educação (Tutoriais (CAI), Software educacional, Jogos, Simuladores, Editores, Tecnologias da Informação e Comunicação (TICs). Educação a Distância (EAD), Redes Sociais.",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "IED"
  },
  {
-  "Codigo": "TMP0039",
+  "Codigo": "TIN0242",
   "Nome": "Novas Formas de Economia",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Quarta revolução industrial. A nova organização. O emprego tecnológico e o impacto nas transformações econômicas. Economia centrada\nem pessoas. Evolução e novos desafios sociais.\r"
+  "Ementa": "Quarta revolução industrial. A nova organização. O emprego tecnológico e o impacto nas transformações econômicas. Economia centrada em pessoas. Evolução e novos desafios sociais.",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "NFE"
  },
  {
-  "Codigo": "TMP0040",
+  "Codigo": "TIN0243",
   "Nome": "Pensamento Computacional",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e\/ou técnica de Pensa- mento Computacional."
+  "Ementa": "Tópicos selecionados sobre o estado da arte e\/ou técnica de Pensa- mento Computacional.",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "PC"
  },
  {
-  "Codigo": "TMP0041",
-  "Nome": "Pensamento\nSistêmico",
+  "Codigo": "TIN0244",
+  "Nome": "Pensamento Sistêmico",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Teoria Geral de Sistemas. Cibernética. A Visão Sistêmica da Vida. Pensamento Sistêmico e Sistemas de Informação."
+  "Ementa": "Teoria Geral de Sistemas. Cibernética. A Visão Sistêmica da Vida. Pensamento Sistêmico e Sistemas de Informação.",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "PS"
  },
  {
-  "Codigo": "TMP0042",
-  "Nome": "Projeto de\nAplicação de\nSistemas de\nInformação em\num Contexto\nEspecífico",
+  "Codigo": "TIN0245",
+  "Nome": "Projeto de Aplicação de Sistemas de Informação em um Contexto Específico",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tipos de Sistemas de informação em contextos específicos; Sistemas\nde informação no contexto empresarial e social; Projeto de Sistemas\nde Informação; Análise de experiências práticas; Aceitação e uso de\nSistemas de Informação; Impactos dos Sistemas de Informação em\nseu contexto de aplicação; Evolução dos Sistemas de Informação."
+  "Ementa": "Tipos de Sistemas de informação em contextos específicos; Sistemas de informação no contexto empresarial e social; Projeto de Sistemas de Informação; Análise de experiências práticas; Aceitação e uso de Sistemas de Informação; Impactos dos Sistemas de Informação em seu contexto de aplicação; Evolução dos Sistemas de Informação.",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "PAS"
  },
  {
   "Codigo": "TIN0159",
   "Nome": "Sistemas Colaborativos",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Importância do Trabalho em Grupo. Conceitos – CSCW e Groupware.\nHistórico da área. Principais aplicações. Aspectos de suporte à colaboração (coordenação, percepção, comunicação, memória de grupo).\nSistemas de Apoio a Reuniões. Sistemas de Gerenciamento de Fluxo\nde Trabalho (workflow). Aprendizado Cooperativo Apoiado por Computador. Uso de Groupware em Organizações. Memória Organizacional. Aspectos de implementação de groupware.",
-  "PreRequisitos": "Engenharia de Software 2"
+  "Ementa": "Importância do Trabalho em Grupo. Conceitos – CSCW e Groupware. Histórico da área. Principais aplicações. Aspectos de suporte à colaboração (coordenação, percepção, comunicação, memória de grupo). Sistemas de Apoio a Reuniões. Sistemas de Gerenciamento de Fluxo de Trabalho (workflow). Aprendizado Cooperativo Apoiado por Computador. Uso de Groupware em Organizações. Memória Organizacional. Aspectos de implementação de groupware.",
+  "PreRequisitos": "Engenharia de Software 2",
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "SC"
  },
  {
-  "Codigo": "TMP0043",
-  "Nome": "Teorias e\nPráticas de\nSistemas de\nInformação",
+  "Codigo": "TIN0246",
+  "Nome": "Teorias e Práticas de Sistemas de Informação",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos teóricos e práticos de Sistemas de Informação: informação,\nsistemas e sociedade; algoritmos e estruturas de dados; engenharia\nde software; modelagem e armazenamento de dados e informação;\narquitetura e infraestrutura de redes e sistemas; gestão organizacional\ne empreendedorismo."
+  "Ementa": "Tópicos teóricos e práticos de Sistemas de Informação: informação, sistemas e sociedade; algoritmos e estruturas de dados; engenharia de software; modelagem e armazenamento de dados e informação; arquitetura e infraestrutura de redes e sistemas; gestão organizacional e empreendedorismo.",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "TPS"
  },
  {
-  "Codigo": "TMP0044",
-  "Nome": "Tópicos em\nInformática na\nEducação",
+  "Codigo": "TIN0247",
+  "Nome": "Tópicos em Informática na Educação",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e\/ou técnica de Informática na Educação. Entre eles tem-se: Teorias de Aprendizagem\ne Métodos Educacionais; Sistemas computacionais voltados para a\neducação; Educação a Distância (EAD) e Redes Sociais. Modelagem\nde Competências. Métodos de avaliação e definição de currículos orientados por competências; Gamificação.\r"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e\/ou técnica de Informática na Educação. Entre eles tem-se: Teorias de Aprendizagem e Métodos Educacionais; Sistemas computacionais voltados para a educação; Educação a Distância (EAD) e Redes Sociais. Modelagem de Competências. Métodos de avaliação e definição de currículos orientados por competências; Gamificação.",
+  "PreRequisitos": null,
+  "Eixo": "Visão Sistêmica (Sistemas de Informação)",
+  "Sigla": "TIE"
  },
  {
-  "Codigo": "TMP0045",
-  "Nome": "Tópicos em\nGestão de\nProcessos de\nNegócio\r",
+  "Codigo": "TIN0248",
+  "Nome": "Tópicos em Gestão de Processos de Negócio",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em gestão de\nprocessos de negócio na gestão de Sistemas de Informação e da Tecnologia da Informação.",
-  "PreRequisitos": "Gestão de\nProcessos de\nNegócios"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em gestão de processos de negócio na gestão de Sistemas de Informação e da Tecnologia da Informação.",
+  "PreRequisitos": "Gestão de Processos de Negócios",
+  "Eixo": "Gestão de SI e TI, Empreendedorismo e Inovação",
+  "Sigla": "TGP"
  },
  {
-  "Codigo": "TMP0046",
-  "Nome": "Tópicos em\nGestão do\nConhecimento",
+  "Codigo": "TIN0249",
+  "Nome": "Tópicos em Gestão do Conhecimento",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Sociedade do conhecimento. Dado, informação e conhecimento. Criação do conhecimento. Gestão do conhecimento nas organizações.\nAprendizagem individual e organizacional. Cultura nas organizações.\nPapel da TIC na gestão do conhecimento. Gestor do conhecimento",
-  "PreRequisitos": "Fundamentos de\nGestão\nOrganizacional"
+  "Ementa": "Sociedade do conhecimento. Dado, informação e conhecimento. Criação do conhecimento. Gestão do conhecimento nas organizações. Aprendizagem individual e organizacional. Cultura nas organizações. Papel da TIC na gestão do conhecimento. Gestor do conhecimento",
+  "PreRequisitos": "Fundamentos de Gestão Organizacional",
+  "Eixo": "Gestão de SI e TI, Empreendedorismo e Inovação",
+  "Sigla": "TGC"
  },
  {
-  "Codigo": "TMP0047",
-  "Nome": "Tópicos em\nInovação\nTecnológica",
+  "Codigo": "TIN0250",
+  "Nome": "Tópicos em Inovação Tecnológica",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte\/técnica em Inovação Tecnológica.",
-  "PreRequisitos": "Metodologia Científica e Tecnológica"
+  "PreRequisitos": "Metodologia Científica e Tecnológica",
+  "Eixo": "Gestão de SI e TI, Empreendedorismo e Inovação",
+  "Sigla": "TIT"
  },
  {
-  "Codigo": "TMP0048",
-  "Nome": "Tópicos em\nPropriedade\nIntelectual",
+  "Codigo": "TIN0251",
+  "Nome": "Tópicos em Propriedade Intelectual",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte\/técnica em Propriedade Intelectual.",
-  "PreRequisitos": "Metodologia Científica e Tecnológica"
+  "PreRequisitos": "Metodologia Científica e Tecnológica",
+  "Eixo": "Gestão de SI e TI, Empreendedorismo e Inovação",
+  "Sigla": "TPI"
  },
  {
-  "Codigo": "TMP0049",
-  "Nome": "Algoritmos para\nCiência de\nDados",
+  "Codigo": "TIN0252",
+  "Nome": "Algoritmos para Ciência de Dados",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Aspectos importantes ao lidar com dados. Dados em altas dimensões. Representação de dados em dimensões menores. Algoritmos\npara streams de dados. Busca de itens similares. Modelos de aprendizagem de máquina.",
-  "PreRequisitos": "Álgebra Linear,\nEstruturas de Dados,\nProbabilidade"
+  "Ementa": "Aspectos importantes ao lidar com dados. Dados em altas dimensões. Representação de dados em dimensões menores. Algoritmos para streams de dados. Busca de itens similares. Modelos de aprendizagem de máquina.",
+  "PreRequisitos": "Álgebra Linear, Estruturas de Dados, Probabilidade",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "ACD"
  },
  {
   "Codigo": "TIN0144",
   "Nome": "Algoritmos para Problemas Combinatórios",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Problemas de otimização combinatória. Programação Dinâmica. Algoritmos Gulosos. Branch&bound.e A*. Heurísticas e metaheurísticas. Simulated annealing, busca tabu, algoritmos genéticos, GRASP\ne VNS.",
-  "PreRequisitos": "Projeto e Análise de\nAlgoritmos"
+  "Ementa": "Problemas de otimização combinatória. Programação Dinâmica. Algoritmos Gulosos. Branch&bound.e A*. Heurísticas e metaheurísticas. Simulated annealing, busca tabu, algoritmos genéticos, GRASP e VNS.",
+  "PreRequisitos": "Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "APC"
  },
  {
-  "Codigo": "TMP0050",
-  "Nome": "Análise\nMultiparadigma\nde Algoritmos",
+  "Codigo": "TIN0253",
+  "Nome": "Análise Multiparadigma de Algoritmos",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Melhores práticas de programação. Noções de controle de versão. Técnicas avançadas de programação de acordo com a Linguagem de Programação.",
-  "PreRequisitos": "Estruturas de Dados, Linguagens e Paradigmas de Programação"
+  "PreRequisitos": "Estruturas de Dados, Linguagens e Paradigmas de Programação",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "AMA"
  },
  {
-  "Codigo": "TMP0051",
-  "Nome": "Aplicações de\nPesquisa\nOperacional",
+  "Codigo": "TIN0254",
+  "Nome": "Aplicações de Pesquisa Operacional",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos emergentes e\/ou relevantes para o enriquecimento e atualização das discussões pertinentes a aplicações de Pesquisa Operacional, preferencialmente em Sistemas de Informação, envolvendo\na discussão teórica da abordagem a diversos problemas, sua implementação em linguagens de programação de alto nível e sua integração com softwares resolvedores de problemas de programação\nmatemática, e interseção com aspectos relacionados com a área de\nInteligência Artificial.",
-  "PreRequisitos": "Projeto e Análise de\nAlgoritmos\r"
+  "Ementa": "Tópicos emergentes e\/ou relevantes para o enriquecimento e atualização das discussões pertinentes a aplicações de Pesquisa Operacional, preferencialmente em Sistemas de Informação, envolvendo a discussão teórica da abordagem a diversos problemas, sua implementação em linguagens de programação de alto nível e sua integração com softwares resolvedores de problemas de programação matemática, e interseção com aspectos relacionados com a área de Inteligência Artificial.",
+  "PreRequisitos": "Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "APO"
  },
  {
-  "Codigo": "TMP0052",
-  "Nome": "Aprendizagem\nProfunda",
+  "Codigo": "TIN0255",
+  "Nome": "Aprendizagem Profunda",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Apresentação das principais arquiteturas de aprendizagem profunda\n(deep learning). Redes neurais feedforward. Redes neurais convolucionais. Máquina restrita de Boltzmann. Redes recorrentes. Autoencoder. Redes generativas adversariais. Aprendizado por reforço.\nAplicações a problemas de diversas áreas.\r",
-  "PreRequisitos": "Álgebra Linear,\nCálculo Diferencial e\nIntegral II, Estruturas\nde Dados"
+  "Ementa": "Apresentação das principais arquiteturas de aprendizagem profunda (deep learning). Redes neurais feedforward. Redes neurais convolucionais. Máquina restrita de Boltzmann. Redes recorrentes. Autoencoder. Redes generativas adversariais. Aprendizado por reforço. Aplicações a problemas de diversas áreas.",
+  "PreRequisitos": "Álgebra Linear, Cálculo Diferencial e Integral II, Estruturas de Dados",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "AP"
  },
  {
-  "Codigo": "TMP0053",
-  "Nome": "Estruturas de\nDados\nAvançadas",
+  "Codigo": "TIN0256",
+  "Nome": "Estruturas de Dados Avançadas",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Dicionários. Árvores Balanceadas. Heaps. Estruturas para Busca em Texto. Estruturas para Buscas Geométricas.",
-  "PreRequisitos": "Estruturas de Dados, Probabilidade"
+  "PreRequisitos": "Estruturas de Dados, Probabilidade",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "EDA"
  },
  {
-  "Codigo": "TMP0054",
-  "Nome": "Estruturas\nDiscretas com\nAlgoritmos",
+  "Codigo": "TIN0257",
+  "Nome": "Estruturas Discretas com Algoritmos",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Princípios de aritmética modular. Introdução a grafos, principais con- ceitos e algoritmos fundamentais. ",
-  "PreRequisitos": "Introdução à Lógica Computacional"
+  "PreRequisitos": "Introdução à Lógica Computacional",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla":"EDI"
  },
  {
-  "Codigo": "TMP0055",
-  "Nome": "Estudo de\nProblemas de\nOtimização\nCombinatória",
+  "Codigo": "TIN0258",
+  "Nome": "Estudo de Problemas de Otimização Combinatória",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Estudo aprofundado de algum(ns) problema(s) clássico(s) de otimização (ou de localização) combinatório(s) NP-Completos, tais como,\npor exemplo, árvore de Steiner, satisfabilidade, caixeiro viajante, etc.\nModelagem. Complexidade. Aplicações. Variações, algoritmos\nexatos, algoritmos aproximativos, algoritmos heurísticos, sistemas\ndisponíveis.",
-  "PreRequisitos": "Cálculo Diferencial e\nIntegral II,\nEstatística, Projeto e\nAnálise de\nAlgoritmos"
+  "Ementa": "Estudo aprofundado de algum(ns) problema(s) clássico(s) de otimização (ou de localização) combinatório(s) NP-Completos, tais como, por exemplo, árvore de Steiner, satisfabilidade, caixeiro viajante, etc. Modelagem. Complexidade. Aplicações. Variações, algoritmos exatos, algoritmos aproximativos, algoritmos heurísticos, sistemas disponíveis.",
+  "PreRequisitos": "Cálculo Diferencial e Integral II, Estatística, Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "EPO"
  },
  {
-  "Codigo": "TMP0056",
-  "Nome": "Fluxos em\nRedes",
+  "Codigo": "TIN0259",
+  "Nome": "Fluxos em Redes",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Problemas de fluxo em redes, com ênfase no problema do fluxo máximo. São apresentados a teoria elementar sobre o tema, algoritmos\ne suas respectivas análises de corretude e eficiência, bem como aplicações e extensões do problema do fluxo máximo.",
-  "PreRequisitos": "Projeto e Análise de\nAlgoritmos"
+  "Ementa": "Problemas de fluxo em redes, com ênfase no problema do fluxo máximo. São apresentados a teoria elementar sobre o tema, algoritmos e suas respectivas análises de corretude e eficiência, bem como aplicações e extensões do problema do fluxo máximo.",
+  "PreRequisitos": "Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "FER"
  },
  {
   "Codigo": "TIN0147",
-  "Nome": "Fundamentos de\nRepresentação\nde\nConhecimento e\nRaciocínio",
+  "Nome": "Fundamentos de Representação de Conhecimento e Raciocínio",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Revisão de Lógica Proposicional e de Predicados. Programação em\nLógica e Prolog. Resolução Automática. Lógica Descritiva. Noções de tópicos avançados de Representação de Conhecimento e\nRaciocínio.",
-  "PreRequisitos": "Introdução à Lógica Computacional"
+  "Ementa": "Revisão de Lógica Proposicional e de Predicados. Programação em Lógica e Prolog. Resolução Automática. Lógica Descritiva. Noções de tópicos avançados de Representação de Conhecimento e Raciocínio.",
+  "PreRequisitos": "Introdução à Lógica Computacional",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "FRC"
  },
  {
-  "Codigo": "TMP0057",
-  "Nome": "Heurísticas\nInteligentes:\nTécnicas e\nAplicações",
+  "Codigo": "TIN0260",
+  "Nome": "Heurísticas Inteligentes: Técnicas e Aplicações",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Revisão sobre teoria da complexidade. Estudo de alguns problemas\nclássicos de otimização combinatória NP-Completos ou NP-Difíceis,\ntais como, por exemplo, satisfatibilidade, caixeiro viajante, agrupamento de módulos de software, recobrimento de conjuntos, empacotamento de objetos, entre outros. Estudo de métodos heurísticos para problemas de otimização combinatória difíceis, como, por\nexemplo, métodos construtivos, algoritmos aproximativos, busca local e metaheurísticas. Aplicações. Experimento computacional com\nheurísticas.",
-  "PreRequisitos": "Estruturas de Dados"
+  "Ementa": "Revisão sobre teoria da complexidade. Estudo de alguns problemas clássicos de otimização combinatória NP-Completos ou NP-Difíceis, tais como, por exemplo, satisfatibilidade, caixeiro viajante, agrupamento de módulos de software, recobrimento de conjuntos, empacotamento de objetos, entre outros. Estudo de métodos heurísticos para problemas de otimização combinatória difíceis, como, por exemplo, métodos construtivos, algoritmos aproximativos, busca local e metaheurísticas. Aplicações. Experimento computacional com heurísticas.",
+  "PreRequisitos": "Estruturas de Dados",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "HI"
  },
  {
-  "Codigo": "TMP0058",
-  "Nome": "Introdução à\nInteligência\nArtificial",
+  "Codigo": "TIN0261",
+  "Nome": "Introdução à Inteligência Artificial",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Visão geral sobre: Busca em espaços de estados, Representação de\nconhecimento, Ontologia, Sistemas especialistas e agentes, Aprendizagem de máquina e Redes neurais.",
-  "PreRequisitos": "Estruturas de Dados,\nIntrodução à Lógica\nComputacional"
+  "Ementa": "Visão geral sobre: Busca em espaços de estados, Representação de conhecimento, Ontologia, Sistemas especialistas e agentes, Aprendizagem de máquina e Redes neurais.",
+  "PreRequisitos": "Estruturas de Dados, Introdução à Lógica Computacional",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "IIA"
  },
  {
-  "Codigo": "TMP0059",
-  "Nome": "Introdução\nAlgorítmica a\nGrafos",
+  "Codigo": "TIN0262",
+  "Nome": "Introdução Algorítmica a Grafos",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Algoritmos básicos em grafos: árvores geradoras de peso mínimo, algoritmos de busca, caminhos de peso mínimo. Arborescência de peso\nmínimo. Determinação de conectividade. Fluxos em grafos-redes.\nEmparelhamentos. Outros problemas de otimização modelados por\ngrafos",
-  "PreRequisitos": "Projeto e Análise de\nAlgoritmos"
+  "Ementa": "Algoritmos básicos em grafos: árvores geradoras de peso mínimo, algoritmos de busca, caminhos de peso mínimo. Arborescência de peso mínimo. Determinação de conectividade. Fluxos em grafos-redes. Emparelhamentos. Outros problemas de otimização modelados por grafos",
+  "PreRequisitos": "Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "IAG"
  },
  {
-  "Codigo": "TMP0060",
-  "Nome": "Modelagem e\nOntologias",
+  "Codigo": "TIN0263",
+  "Nome": "Modelagem e Ontologias",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre representação do conhecimento. Modelagem conceitual de ontologias. Ontologias de fundamentação. Linguagens para descrição de ontologias. Aplicações em Sistemas de\nInformação.",
-  "PreRequisitos": "Introdução à Lógica\nComputacional"
+  "Ementa": "Tópicos selecionados sobre representação do conhecimento. Modelagem conceitual de ontologias. Ontologias de fundamentação. Linguagens para descrição de ontologias. Aplicações em Sistemas de Informação.",
+  "PreRequisitos": "Introdução à Lógica Computacional",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "MEO"
  },
  {
-  "Codigo": "TMP0061",
-  "Nome": "Processamento\nBaseado em\nRestrições",
+  "Codigo": "TIN0264",
+  "Nome": "Processamento Baseado em Restrições",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Redes de restrições. Propagação de restrições. Estratégias gerais\nde busca. Métodos baseados em consistência. Métodos baseados\nem decomposição de árvores. Linguagens para programação baseada em restrições. Otimização de restrições. Redes probabilísticas.\nProgramação lógica baseada em restrições.",
-  "PreRequisitos": "Cálculo Diferencial e\nIntegral II,\nEstatística, Projeto e\nAnálise de\nAlgoritmos"
+  "Ementa": "Redes de restrições. Propagação de restrições. Estratégias gerais de busca. Métodos baseados em consistência. Métodos baseados em decomposição de árvores. Linguagens para programação baseada em restrições. Otimização de restrições. Redes probabilísticas. Programação lógica baseada em restrições.",
+  "PreRequisitos": "Cálculo Diferencial e Integral II, Estatística, Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "PBR"
  },
  {
   "Codigo": "TIN0142",
   "Nome": "Programação Linear",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Modelagem de problemas para a forma de programação linear. Método Simplex. Soluções iniciais e convergência. Dualidade e análise\nde sensibilidade. Princípio da Decomposição. Algoritmos de pontos\ninteriores.",
-  "PreRequisitos": "Projeto e Análise de\nAlgoritmos"
+  "Ementa": "Modelagem de problemas para a forma de programação linear. Método Simplex. Soluções iniciais e convergência. Dualidade e análise de sensibilidade. Princípio da Decomposição. Algoritmos de pontos interiores.",
+  "PreRequisitos": "Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "PL"
  },
  {
-  "Codigo": "TMP0062",
-  "Nome": "Técnicas de\nProgramação\nAvançada",
+  "Codigo": "TIN0265",
+  "Nome": "Técnicas de Programação Avançada",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Revisão de técnicas de programação. Melhores práticas de programação. Noções de controle de versão. Dojo de programação. Técnicas avançadas de programação. Noções de programação funcional.\nEstruturas de dados avançadas. Gráficos e visualização de dados.\nManipulação de texto. Noções de desempenho e paralelismo. Programação para aplicações de larga escala. Aplicações em ciência de\ndados e computação científica.",
-  "PreRequisitos": "Estruturas de Dados"
+  "Ementa": "Revisão de técnicas de programação. Melhores práticas de programação. Noções de controle de versão. Dojo de programação. Técnicas avançadas de programação. Noções de programação funcional. Estruturas de dados avançadas. Gráficos e visualização de dados. Manipulação de texto. Noções de desempenho e paralelismo. Programação para aplicações de larga escala. Aplicações em ciência de dados e computação científica.",
+  "PreRequisitos": "Estruturas de Dados",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "TPA"
  },
  {
-  "Codigo": "TMP0063",
-  "Nome": "Tópicos em\nAlgoritmos",
+  "Codigo": "TIN0266",
+  "Nome": "Tópicos em Algoritmos",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte na área de Algoritmos.",
-  "PreRequisitos": "Projeto e Análise de Algoritmos"
+  "PreRequisitos": "Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "TEA"
  },
  {
-  "Codigo": "TMP0064",
-  "Nome": "Tópicos em\nAplicações de\nLógica e\nRaciocínio\nAutomatizado",
+  "Codigo": "TIN0267",
+  "Nome": "Tópicos em Aplicações de Lógica e Raciocínio Automatizado",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos emergentes e\/ou relevantes para o enriquecimento e atualização das discussões pertinentes aos campos de desenvolvimento\nrepresentação do conhecimento e raciocínio automatizado, podendo\nversar sobre agentes lógicos, lógicas específicas, engenharia de ontologias, entre outras formas",
-  "PreRequisitos": "Introdução à Lógica\nComputacional,\nProjeto e Análise de\nAlgoritmos"
+  "Ementa": "Tópicos emergentes e\/ou relevantes para o enriquecimento e atualização das discussões pertinentes aos campos de desenvolvimento representação do conhecimento e raciocínio automatizado, podendo versar sobre agentes lógicos, lógicas específicas, engenharia de ontologias, entre outras formas",
+  "PreRequisitos": "Introdução à Lógica Computacional, Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "TEA"
  },
  {
-  "Codigo": "TMP0065",
-  "Nome": "Tópicos em\nAprendizagem\nde Máquina",
+  "Codigo": "TIN0268",
+  "Nome": "Tópicos em Aprendizagem de Máquina",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte e prática em aprendizagem de máquina.",
-  "PreRequisitos": "Cálculo Diferencial e\nIntegral II,\nEstatística, Projeto e\nAnálise de\nAlgoritmos"
+  "PreRequisitos": "Cálculo Diferencial e Integral II, Estatística, Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "TAM"
  },
  {
-  "Codigo": "TMP0066",
-  "Nome": "Tópicos em\nEngenharia de\nOntologias",
+  "Codigo": "TIN0269",
+  "Nome": "Tópicos em Engenharia de Ontologias",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em engenharia de ontologias aplicadas no desenvolvimento de sistemas de\ninformação",
-  "PreRequisitos": "Introdução à Lógica\nComputacional"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em engenharia de ontologias aplicadas no desenvolvimento de sistemas de informação",
+  "PreRequisitos": "Introdução à Lógica Computacional",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "TEO"
  },
  {
-  "Codigo": "TMP0067",
-  "Nome": "Tópicos em\nProcessamento\nde Linguagem\nNatural",
+  "Codigo": "TIN0270",
+  "Nome": "Tópicos em Processamento de Linguagem Natural",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte e prática em processa- mento de linguagem natural.",
-  "PreRequisitos": "Cálculo Diferencial e\nIntegral II,\nEstatística, Projeto e\nAnálise de\nAlgoritmos"
+  "PreRequisitos": "Cálculo Diferencial e Integral II, Estatística, Projeto e Análise de Algoritmos",
+  "Eixo": "Desenvolvimento de Software para SI (Programação e Algoritmos)",
+  "Sigla": "TPL"
  },
  {
-  "Codigo": "TMP0068",
-  "Nome": "Desenvolvimento\nde Servidor Web",
+  "Codigo": "TIN0271",
+  "Nome": "Desenvolvimento de Servidor Web",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Aplicações baseadas na web. Projeto de aplicações baseadas na\nweb. Frameworks de lado servidor. Frameworks de lado cliente. Tecnologias de construção de aplicações para web. Testes de aplicações\nbaseadas na web. Bibliotecas de tags.",
-  "PreRequisitos": "Armazenamento e\nGestão de Dados"
+  "Ementa": "Aplicações baseadas na web. Projeto de aplicações baseadas na web. Frameworks de lado servidor. Frameworks de lado cliente. Tecnologias de construção de aplicações para web. Testes de aplicações baseadas na web. Bibliotecas de tags.",
+  "PreRequisitos": "Armazenamento e Gestão de Dados",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "DPW"
  },
  {
-  "Codigo": "TMP0069",
-  "Nome": "Engenharia de\nSistemas\nComplexos",
+  "Codigo": "TIN0272",
+  "Nome": "Engenharia de Sistemas Complexos",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Introdução à engenharia de sistemas complexos, de larga escala e de\nlongo prazo. Tipos de sistemas complexos. Conceitos básicos. Histórico. Definição e exemplos. Taxonomia e características. Técnicas\nde modelagem, análise e monitoramento de plataformas de sistemas\ncomplexos. Desafios e perspectivas de pesquisa e práticas. Aplicações em casos reais.",
-  "PreRequisitos": "Engenharia de\nSoftware II"
+  "Ementa": "Introdução à engenharia de sistemas complexos, de larga escala e de longo prazo. Tipos de sistemas complexos. Conceitos básicos. Histórico. Definição e exemplos. Taxonomia e características. Técnicas de modelagem, análise e monitoramento de plataformas de sistemas complexos. Desafios e perspectivas de pesquisa e práticas. Aplicações em casos reais.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "ESC"
  },
  {
-  "Codigo": "TMP0070",
-  "Nome": "Interfaces\nMóveis",
+  "Codigo": "TIN0273",
+  "Nome": "Interfaces Móveis",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Introdução. Mundo móvel. O ambiente móvel. Experiência do usuário\n(EU) em dispositivos Móveis. Elementos de interface. Princípios para\numa boa experiência do usuário. Atividades no design de uma boa\nexperiência do usuário. Princípios de design. Acessibilidade móvel.\nMapeando o WCAG para dispositivos móveis.",
-  "PreRequisitos": "Interação HumanoComputador\r"
+  "Ementa": "Introdução. Mundo móvel. O ambiente móvel. Experiência do usuário (EU) em dispositivos Móveis. Elementos de interface. Princípios para uma boa experiência do usuário. Atividades no design de uma boa experiência do usuário. Princípios de design. Acessibilidade móvel. Mapeando o WCAG para dispositivos móveis.",
+  "PreRequisitos": "Interação HumanoComputador",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "IM"
  },
  {
-  "Codigo": "TMP0071",
-  "Nome": "\nProjeto de Jogos\nDigitais",
+  "Codigo": "TIN0274",
+  "Nome": "Projeto de Jogos Digitais",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Conceitos e definições de jogos e jogos digitais. Os gêneros de jogos\ndigitais. Elementos de projeto de jogos (mecânicas, narrativas, estética e tecnologia). Projeto de jogo digital. Tecnologias de suporte ao\nprojeto de jogo digital. Documento de game design. Jogadores. Tecnologias de desenvolvimento de jogos digitais (game engines). Avaliação de jogos. Gamificação. Jogos sérios. Prototipação e desenvolvimento do jogo digital.",
-  "PreRequisitos": "Modelagem da Informação"
+  "Ementa": "Conceitos e definições de jogos e jogos digitais. Os gêneros de jogos digitais. Elementos de projeto de jogos (mecânicas, narrativas, estética e tecnologia). Projeto de jogo digital. Tecnologias de suporte ao projeto de jogo digital. Documento de game design. Jogadores. Tecnologias de desenvolvimento de jogos digitais (game engines). Avaliação de jogos. Gamificação. Jogos sérios. Prototipação e desenvolvimento do jogo digital.",
+  "PreRequisitos": "Modelagem da Informação",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "PJD"
  },
  {
-  "Codigo": "TMP0072",
-  "Nome": "Tópicos em\nArquitetura de\nSoftware",
+  "Codigo": "TIN0275",
+  "Nome": "Tópicos em Arquitetura de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte e prática em arquitetura de software no desenvolvimento de sistemas de informação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TAS"
  },
  {
-  "Codigo": "TMP0073",
-  "Nome": "Tópicos em\nAspectos\nHumanos,\nEconômicos e\nSociais de\nSoftware",
+  "Codigo": "TIN0276",
+  "Nome": "Tópicos em Aspectos Humanos, Econômicos e Sociais de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em aspectos\nhumanos, econômicos e sociais no desenvolvimento de sistemas de\ninformação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em aspectos humanos, econômicos e sociais no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TAH"
  },
  {
-  "Codigo": "TMP0074",
-  "Nome": "Tópicos em\nConstrução de\nSoftware",
+  "Codigo": "TIN0277",
+  "Nome": "Tópicos em Construção de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte e prática em construção de software no desenvolvimento de sistemas de informação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TCS"
  },
  {
-  "Codigo": "TMP0075",
-  "Nome": "Tópicos em\nEngenharia de\nRequisitos",
+  "Codigo": "TIN0278",
+  "Nome": "Tópicos em Engenharia de Requisitos",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em engenharia de requisitos no desenvolvimento de sistemas de informação. ",
-  "PreRequisitos": "Engenharia de Software II"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em engenharia de requisitos no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TER"
  },
  {
-  "Codigo": "TMP0076",
-  "Nome": "Tópicos em\nEngenharia de\nSoftware\nExperimenta",
+  "Codigo": "TIN0279",
+  "Nome": "Tópicos em Engenharia de Software Experimental",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em engenharia de software experimental no desenvolvimento de sistemas de\ninformação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em engenharia de software experimental no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TES"
  },
  {
-  "Codigo": "TMP0077",
-  "Nome": "Tópicos em\nGerência de\nConfiguração de\nSoftware\r",
+  "Codigo": "TIN0280",
+  "Nome": "Tópicos em Gerência de Configuração de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em gerência de configuração de software no desenvolvimento de sistemas de\ninformação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em gerência de configuração de software no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TGC"
  },
  {
-  "Codigo": "TMP0078",
-  "Nome": "Tópicos em\nGerência de\nProjetos",
+  "Codigo": "TIN0281",
+  "Nome": "Tópicos em Gerência de Projetos",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em gerência de projetos no desenvolvimento de sistemas de informação. ",
-  "PreRequisitos": "Gerência de Projetos"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em gerência de projetos no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Gerência de Projetos",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TPG"
  },
  {
-  "Codigo": "TMP0079",
-  "Nome": "Tópicos em\nManutenção de\nSoftware",
+  "Codigo": "TIN0282",
+  "Nome": "Tópicos em Manutenção de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em manutenção de software no desenvolvimento de sistemas de informação. ",
-  "PreRequisitos": "Engenharia de Software II"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em manutenção de software no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TMS"
  },
  {
-  "Codigo": "TMP0080",
-  "Nome": "Tópicos em\nModelagem de\nSoftware",
+  "Codigo": "TIN0283",
+  "Nome": "Tópicos em Modelagem de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em modelagem de software no desenvolvimento de sistemas de informação. ",
-  "PreRequisitos": "Engenharia de Software II"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em modelagem de software no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TEM"
  },
  {
-  "Codigo": "TMP0081",
-  "Nome": "Tópicos em\nProcessos de\nSoftware",
+  "Codigo": "TIN0284",
+  "Nome": "Tópicos em Processos de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte e prática em processos de software no desenvolvimento de sistemas de informação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TEP"
  },
  {
-  "Codigo": "TMP0082",
-  "Nome": "Tópicos em\nProjeto de\nSoftware",
+  "Codigo": "TIN0285",
+  "Nome": "Tópicos em Projeto de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em projeto de software no desenvolvimento de sistemas de informação. ",
-  "PreRequisitos": "Engenharia de Software II"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em projeto de software no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "PST"
  },
  {
-  "Codigo": "TMP0083",
-  "Nome": "Tópicos em\nQualidade de\nSoftware",
+  "Codigo": "TIN0286",
+  "Nome": "Tópicos em Qualidade de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte e prática em qualidade de software no desenvolvimento de sistemas de informação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TQS"
  },
  {
-  "Codigo": "TMP0084",
-  "Nome": "Tópicos em\nSistemas\nColaborativos",
+  "Codigo": "TIN0287",
+  "Nome": "Tópicos em Sistemas Colaborativos",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Tópicos selecionados sobre o estado da arte e prática em sistemas colaborativos no desenvolvimento de sistemas de informação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TSC"
  },
  {
-  "Codigo": "TMP0085",
-  "Nome": "Tópicos em\nVerificação,\nValidação e\nTestes de\nSoftware",
+  "Codigo": "TIN0288",
+  "Nome": "Tópicos em Verificação,Validação e Testes de Software",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em verificação,\nvalidação e testes de software no desenvolvimento de sistemas de\ninformação.",
-  "PreRequisitos": "Engenharia de Software II"
+  "Ementa": "Tópicos selecionados sobre o estado da arte e prática em verificação, validação e testes de software no desenvolvimento de sistemas de informação.",
+  "PreRequisitos": "Engenharia de Software II",
+  "Eixo": "Desenvolvimento de Software para SI (Engenharia de Software)",
+  "Sigla": "TVV"
  },
  {
   "Codigo": "TIN0135",
-  "Nome": "Administração\nde Banco de\nDados",
+  "Nome": "Administração de Banco de Dados",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Administração de dados. Administração de Banco de Dados. Projeto e implementação de uma base de dados relacional, em ambiente\ncliente-servidor, utilizando SGBD. Importação e exportação de dados.\nEstudo dos planos de acesso gerados pelas consultas. Otimização de\nconsultas. Uso de índices. Gerenciamento de espaço em disco. Tuning. Cópia e recuperação da base de dados.",
-  "PreRequisitos": "Armazenamento e\nGestão de Dados"
+  "Ementa": "Administração de dados. Administração de Banco de Dados. Projeto e implementação de uma base de dados relacional, em ambiente cliente-servidor, utilizando SGBD. Importação e exportação de dados. Estudo dos planos de acesso gerados pelas consultas. Otimização de consultas. Uso de índices. Gerenciamento de espaço em disco. Tuning. Cópia e recuperação da base de dados.",
+  "PreRequisitos": "Armazenamento e Gestão de Dados",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "ABD"
  },
  {
-  "Codigo": "TMP0086",
-  "Nome": "Banco de Dados\nDistribuídos",
+  "Codigo": "TIN0289",
+  "Nome": "Banco de Dados Distribuídos",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Conceito de banco de dados distribuídos (BDD). Tipos de banco de\ndados distribuídos. Arquitetura de bancos de dados distribuídos. Técnicas de fragmentação, replicação e alocação de dados para projeto\nde banco de dados distribuídos. Processamento e otimização de consultas em banco de dados distribuídos. Visão geral de gerenciamento\nde transações e controle de concorrência em banco de dados distribuídos. Gerenciamento de catálogo distribuído. Tendências em bancos\nde dados distribuídos.",
-  "PreRequisitos": "Armazenamento e\nGestão de Dados\r"
+  "Ementa": "Conceito de banco de dados distribuídos (BDD). Tipos de banco de dados distribuídos. Arquitetura de bancos de dados distribuídos. Técnicas de fragmentação, replicação e alocação de dados para projeto de banco de dados distribuídos. Processamento e otimização de consultas em banco de dados distribuídos. Visão geral de gerenciamento de transações e controle de concorrência em banco de dados distribuídos. Gerenciamento de catálogo distribuído. Tendências em bancos de dados distribuídos.",
+  "PreRequisitos": "Armazenamento e Gestão de Dados",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "BDD"
  },
  {
-  "Codigo": "TMP0087",
-  "Nome": "Banco de Dados\nNão\nConvencionais",
+  "Codigo": "TIN0290",
+  "Nome": "Banco de Dados Não Convencionais",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Bancos de dados NoSQL. Modelos de dados agregados. Modelos de distribuição e processamento. Tipos de bancos de dados\nNoSQL. Bancos de dados NewSQL. Propriedades dos bancos de dados NoSQL e NewSQL. Aplicações e exemplos de SGBDs NoSQL e\nNewSQL.",
-  "PreRequisitos": "Armazenamento e\nGestão de Dados"
+  "Ementa": "Bancos de dados NoSQL. Modelos de dados agregados. Modelos de distribuição e processamento. Tipos de bancos de dados NoSQL. Bancos de dados NewSQL. Propriedades dos bancos de dados NoSQL e NewSQL. Aplicações e exemplos de SGBDs NoSQL e NewSQL.",
+  "PreRequisitos": "Armazenamento e Gestão de Dados",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "BNC"
  },
  {
-  "Codigo": "TMP0088",
-  "Nome": "Projeto de\nAplicações com\nDados Abertos",
+  "Codigo": "TIN0291",
+  "Nome": "Projeto de Aplicações com Dados Abertos",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Dados Abertos: visão geral, importância e uso. Portais de dados abertos. Transparência digital. Ferramentas para construção de sistemas\nde inteligência de negócios. Desenvolvimento de software com uso\nde dados abertos.",
-  "PreRequisitos": "Modelagem da\nInformação"
+  "Ementa": "Dados Abertos: visão geral, importância e uso. Portais de dados abertos. Transparência digital. Ferramentas para construção de sistemas de inteligência de negócios. Desenvolvimento de software com uso de dados abertos.",
+  "PreRequisitos": "Modelagem da Informação",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "PAD"
  },
  {
-  "Codigo": "TMP0089",
-  "Nome": "Recuperação de\nInformação",
+  "Codigo": "TIN0292",
+  "Nome": "Recuperação de Informação",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Processo de busca e recuperação de informação. Modelos de recuperação de informação. Avaliação de sistemas de recuperação de\ninformação. Ferramentas para recuperação de informação. Estado\nda arte de recuperação de informação.",
-  "PreRequisitos": "Armazenamento e\nGestão de Dados,\nEstatística"
+  "Ementa": "Processo de busca e recuperação de informação. Modelos de recuperação de informação. Avaliação de sistemas de recuperação de informação. Ferramentas para recuperação de informação. Estado da arte de recuperação de informação.",
+  "PreRequisitos": "Armazenamento e Gestão de Dados, Estatística",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "RDI"
  },
  {
-  "Codigo": "TMP0090",
-  "Nome": "Séries\nTemporais",
+  "Codigo": "TIN0293",
+  "Nome": "Séries Temporais",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Séries temporais: estacionárias e não-estacionárias. Processos\nestacionários. Modelagem de séries temporais. Modelos autoregressivos: MA, ARMA e ARIMA. Modelos sazonais. Medidas\nde auto-correlação. Seleção de modelos. Critérios de informação:\nAkaike e Schwarz. Previsão com modelos. Modelos de Espaço de\nEstados (dinâmicos). Aplicações.",
-  "PreRequisitos": "Modelagem da\nInformação"
+  "Ementa": "Séries temporais: estacionárias e não-estacionárias. Processos estacionários. Modelagem de séries temporais. Modelos autoregressivos: MA, ARMA e ARIMA. Modelos sazonais. Medidas de auto-correlação. Seleção de modelos. Critérios de informação: Akaike e Schwarz. Previsão com modelos. Modelos de Espaço de Estados (dinâmicos). Aplicações.",
+  "PreRequisitos": "Modelagem da Informação",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "ST"
  },
  {
-  "Codigo": "TMP0091",
-  "Nome": "Descoberta de\nConhecimento\nem Dados",
+  "Codigo": "TIN0294",
+  "Nome": "Descoberta de Conhecimento em Dados",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "O processo de Descoberta de Conhecimento em Dados (KDD). Dados analíticos e tomada de decisão. Automação de processos com\nAprendizado de Máquina. Padrões em dados. Aprendizado supervisionado, não-supervisionado, semi-supervisionado e por reforço. Regressão. Classificação. Análise de clustering. Regras de associação.\nDetecção de anomalias. Redução de dimensionalidade. Seleção de\natributos. Avaliação de modelos e seleção de parâmetros. Métricas\nde desempenho. Aplicações em bem-estar social.",
-  "PreRequisitos": "Ciência de Dados "
+  "Ementa": "O processo de Descoberta de Conhecimento em Dados (KDD). Dados analíticos e tomada de decisão. Automação de processos com Aprendizado de Máquina. Padrões em dados. Aprendizado supervisionado, não-supervisionado, semi-supervisionado e por reforço. Regressão. Classificação. Análise de clustering. Regras de associação. Detecção de anomalias. Redução de dimensionalidade. Seleção de atributos. Avaliação de modelos e seleção de parâmetros. Métricas de desempenho. Aplicações em bem-estar social.",
+  "PreRequisitos": "Ciência de Dados",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "DCD"
  },
  {
-  "Codigo": "TMP0092",
-  "Nome": "Processamento\ne Mineração de\nTexto",
+  "Codigo": "TIN0295",
+  "Nome": "Processamento e Mineração de Texto",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Visão geral de Análise de Texto. Captura e preparação dos dados\ntextuais não estruturados. Técnicas e aplicações de análise textual:\nrecuperação e extração de Informação, reconhecimento de entidades\nnomeadas, análise de sentimentos, análise textual preditiva, dentre\noutras.",
-  "PreRequisitos": "Ciência de Dados "
+  "Ementa": "Visão geral de Análise de Texto. Captura e preparação dos dados textuais não estruturados. Técnicas e aplicações de análise textual: recuperação e extração de Informação, reconhecimento de entidades nomeadas, análise de sentimentos, análise textual preditiva, dentre outras.",
+  "PreRequisitos": "Ciência de Dados",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "PMT"
  },
  {
-  "Codigo": "TMP0093",
-  "Nome": "Projetos de\nCiência de\nDados para o\nBem-Estar\nSocia",
+  "Codigo": "TIN0296",
+  "Nome": "Projetos de Ciência de Dados para o Bem-Estar Social",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Visão geral da Ciência de Dados para problemas de bem-estar social.\nEstruturação metodológica de projetos de Ciência de Dados: contextualização, teorização, enquadramento analítico, modelagem, engenharia, experimentação. Aplicações em bem-estar social e interesse\npúblico: saúde, segurança pública, justiça, desenvolvimento econômico, serviços sociais, transparência governamental, trabalho, educação, meio ambiente, desastres, energia, transporte, infraestrutura.",
-  "PreRequisitos": "Ciência de Dados "
+  "Ementa": "Visão geral da Ciência de Dados para problemas de bem-estar social. Estruturação metodológica de projetos de Ciência de Dados: contextualização, teorização, enquadramento analítico, modelagem, engenharia, experimentação. Aplicações em bem-estar social e interesse público: saúde, segurança pública, justiça, desenvolvimento econômico, serviços sociais, transparência governamental, trabalho, educação, meio ambiente, desastres, energia, transporte, infraestrutura.",
+  "PreRequisitos": "Ciência de Dados",
+  "Eixo": "Engenharia de Dados e Informação",
+  "Sigla": "PCD"
  },
  {
-  "Codigo": "TIN0150\r",
-  "Nome": "Ambiente\nOperacional\nUNIX",
+  "Codigo": "TIN0150",
+  "Nome": "Ambiente Operacional UNIX",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Interpretadores de comandos (C-shell, Bourne shell), criação de\nscripts de comandos e programas. Principais utilitários do sistema.\nProcessos e comunicação entre eles.\r"
+  "Ementa": "Interpretadores de comandos (C-shell, Bourne shell), criação de scripts de comandos e programas. Principais utilitários do sistema. Processos e comunicação entre eles.",
+  "PreRequisitos": null,
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "AOU"
  },
  {
-  "Codigo": "TMP0094",
+  "Codigo": "TIN0297",
   "Nome": "Automação",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Automação, Robótica Básica e Internet das Coisas",
-  "PreRequisitos": "Redes de Computadores"
+  "PreRequisitos": "Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "AUT"
  },
  {
-  "Codigo": "TMP0095",
-  "Nome": "Ferramentas de\nModelagem e\nSimulação para\nAvaliação de\nDesempenho",
+  "Codigo": "TIN0298",
+  "Nome": "Ferramentas de Modelagem e Simulação para Avaliação de Desempenho",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Parâmetros usados na modelagem de sistemas. Ferramentas de modelagem e de simulação. Avaliação de desempenho dos modelos.\nEstudo de casos.",
-  "PreRequisitos": "Probabilidade,\nRedes de\nComputadores"
+  "Ementa": "Parâmetros usados na modelagem de sistemas. Ferramentas de modelagem e de simulação. Avaliação de desempenho dos modelos. Estudo de casos.",
+  "PreRequisitos": "Probabilidade, Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "FMS"
  },
  {
-  "Codigo": "TMP0096",
-  "Nome": "Gerenciamento\nde Redes e\nServiços",
+  "Codigo": "TIN0299",
+  "Nome": "Gerenciamento de Redes e Serviços",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Configuração de serviços básicos de rede. Arquitetura e protocolos de\ngerenciamento de redes e serviços. Ferramentas de monitoramento e\nanálise. Boas práticas de gerenciamento de redes e serviços. Tópicos\navançados.",
-  "PreRequisitos": "Redes de\nComputadores"
+  "Ementa": "Configuração de serviços básicos de rede. Arquitetura e protocolos de gerenciamento de redes e serviços. Ferramentas de monitoramento e análise. Boas práticas de gerenciamento de redes e serviços. Tópicos avançados.",
+  "PreRequisitos": "Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "GRS"
  },
  {
-  "Codigo": "TMP0097",
-  "Nome": "Modelos de\nSistemas de\nComputação e\nComunicação",
+  "Codigo": "TIN0300",
+  "Nome": "Modelos de Sistemas de Computação e Comunicação",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Probabilidade e estatística. Variáveis aleatórias. Medidas de inte- resse. Intervalo de confiança. Simulação. Teoria de filas.",
-  "PreRequisitos": "Probabilidade, Redes de Computadores"
+  "PreRequisitos": "Probabilidade, Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "MSC"
  },
  {
-  "Codigo": "TMP0098",
-  "Nome": "Redes Móveis e\nComputação\nUbíqua",
+  "Codigo": "TIN0301",
+  "Nome": "Redes Móveis e Computação Ubíqua",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Introdução à transmissão sem fio. Tipos de redes sem fio: WLAN e\nWPAN. Rede celular 2G, 3G e 4G. Rede oportunista e D2D. Internet\ndas coisas. Rede veicular. Introdução à computação móvel e ubíqua.\nDesenvolvimento de projeto de uma rede e de uma aplicação móvel.",
-  "PreRequisitos": "Redes de\nComputadores"
+  "Ementa": "Introdução à transmissão sem fio. Tipos de redes sem fio: WLAN e WPAN. Rede celular 2G, 3G e 4G. Rede oportunista e D2D. Internet das coisas. Rede veicular. Introdução à computação móvel e ubíqua. Desenvolvimento de projeto de uma rede e de uma aplicação móvel.",
+  "PreRequisitos": "Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "RMC"
  },
  {
-  "Codigo": "TMP0099",
-  "Nome": "Segurança de\nTecnologia da\nInformação",
+  "Codigo": "TIN0302",
+  "Nome": "Segurança de Tecnologia da Informação",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Conceitos básicos de segurança. Segurança nas camadas de aplicação, transporte e rede. Segurança em redes sem fio. Ataques e\ncontramedidas. Segurança de redes e serviços.",
-  "PreRequisitos": "Redes de\nComputadores"
+  "Ementa": "Conceitos básicos de segurança. Segurança nas camadas de aplicação, transporte e rede. Segurança em redes sem fio. Ataques e contramedidas. Segurança de redes e serviços.",
+  "PreRequisitos": "Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "STI"
  },
  {
-  "Codigo": "TMP0100",
-  "Nome": "Serviços de\nRede e\nMultimídia",
+  "Codigo": "TIN0303",
+  "Nome": "Serviços de Rede e Multimídia",
   "CargaHoraria": 60,
   "Creditos": 4,
   "Ementa": "Desenvolvimento de aplicações e serviços de rede. Aplicações multi- mídia. Garantia de desempenho na rede. Distribuição de conteúdo. ",
-  "PreRequisitos": "Redes de\nComputadores"
+  "PreRequisitos": "Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "SRM"
  },
  {
-  "Codigo": "TMP0101",
-  "Nome": "Simulação\nEstocástica",
+  "Codigo": "TIN0304",
+  "Nome": "Simulação Estocástica",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Fundamentos de simulação computacional. Geração de números\npseudo-aleatórios. Simulação de eventos discretos. Análise estatística de dados simulados. Métodos de Monte Carlo por cadeias de\nMarkov.",
-  "PreRequisitos": "Estruturas de Dados,\nProbabilidade,\nRedes de\nComputadores"
+  "Ementa": "Fundamentos de simulação computacional. Geração de números pseudo-aleatórios. Simulação de eventos discretos. Análise estatística de dados simulados. Métodos de Monte Carlo por cadeias de Markov.",
+  "PreRequisitos": "Estruturas de Dados, Probabilidade, Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "SE"
  },
  {
-  "Codigo": "TMP0102",
-  "Nome": "Sistemas\nDistribuídos",
+  "Codigo": "TIN0305",
+  "Nome": "Sistemas Distribuídos",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Conceitos básicos de sistemas distribuídos. Revisão de processos e\nthreads. Arquiteturas para sistemas distribuídos. Comunicação e sincronização, algoritmos de coordenação. Consistência e estado global.\nTópicos avançados.",
-  "PreRequisitos": "Redes de\nComputadores"
+  "Ementa": "Conceitos básicos de sistemas distribuídos. Revisão de processos e threads. Arquiteturas para sistemas distribuídos. Comunicação e sincronização, algoritmos de coordenação. Consistência e estado global. Tópicos avançados.",
+  "PreRequisitos": "Redes de Computadores",
+  "Eixo": "Infraestrutura em SI",
+  "Sigla": "SD"
  },
  {
   "Codigo": "HDI0164",
-  "Nome": "Culturas\nAfro-Brasileiras\nem Sala de Aula",
+  "Nome": "Culturas Afro-Brasileiras em Sala de Aula",
   "CargaHoraria": 30,
   "Creditos": 2,
-  "Ementa": "Diversidade Étnico-Racial na Escola de Ensino Fundamental. Diáspora Negra. Civilizações africanas. Africanos no Brasil: origem e\ncontribuições. Movimento negro. Quilombos: história, organização\ne cultura. Lei 10639\/2003: texto e contexto. Africanidade e Religiosidade. Culturas Afro-brasileiras Contemporâneas. Dimensões do\nEnsino da Cultura Afro-Brasileira."
+  "Ementa": "Diversidade Étnico-Racial na Escola de Ensino Fundamental. Diáspora Negra. Civilizações africanas. Africanos no Brasil: origem e contribuições. Movimento negro. Quilombos: história, organização e cultura. Lei 10639\/2003: texto e contexto. Africanidade e Religiosidade. Culturas Afro-brasileiras Contemporâneas. Dimensões do Ensino da Cultura Afro-Brasileira.",
+  "PreRequisitos": null,
+  "Eixo": "Desenvolvimento Pessoal e Profissional",
+  "Sigla": "CAB"
  },
  {
   "Codigo": "SER0012",
-  "Nome": "Educação\nAmbiental e\nCidadania",
+  "Nome": "Educação Ambiental e Cidadania",
   "CargaHoraria": 45,
   "Creditos": 2,
-  "Ementa": "Estudo de questões educacionais relativas ao meio ambiente, considerando a inter-relação homem-natureza, especificamente no que se\nrefere ao ambiente de vida das pessoas, dentro de uma abordagem\ninter e multidisciplinar dos aspectos: político, ético, econômico, social,\necológico, evolutivo, histórico, cultural, etc."
+  "Ementa": "Estudo de questões educacionais relativas ao meio ambiente, considerando a inter-relação homem-natureza, especificamente no que se refere ao ambiente de vida das pessoas, dentro de uma abordagem inter e multidisciplinar dos aspectos: político, ético, econômico, social, ecológico, evolutivo, histórico, cultural, etc.",
+  "PreRequisitos": null,
+  "Eixo": "Desenvolvimento Pessoal e Profissional",
+  "Sigla": "EAC"
  },
  {
   "Codigo": "HDI0142",
   "Nome": "Língua Brasileira de Sinais",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Língua Brasileira de Sinais e suas singularidades lingüísticas. Vivência da LIBRAS a partir do contato direto com um(a) professor(a)\nsurdo(a). Implicações do Decreto n° 5.626 para a prática escolar e\nformação do(a) professor(a)."
+  "Ementa": "Língua Brasileira de Sinais e suas singularidades lingüísticas. Vivência da LIBRAS a partir do contato direto com um(a) professor(a) surdo(a). Implicações do Decreto n° 5.626 para a prática escolar e formação do(a) professor(a).",
+  "PreRequisitos": null,
+  "Eixo": "Desenvolvimento Pessoal e Profissional",
+  "Sigla": "LBS"
  },
  {
   "Codigo": "TIN0151",
   "Nome": "Formação Complementar I",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Disciplina para validação de creditação de formação complementar\nobrigatória, fora da área de computação, obtida por aprovação em\ndisciplina cursada em outra IES."
+  "Ementa": "Disciplina para validação de creditação de formação complementar obrigatória, fora da área de computação, obtida por aprovação em disciplina cursada em outra IES.",
+  "PreRequisitos": null,
+  "Eixo": "Formação Complementar",
+  "Sigla": "FC1"
  },
  {
   "Codigo": "TIN0152",
   "Nome": "Formação Complementar II",
   "CargaHoraria": 60,
   "Creditos": 4,
-  "Ementa": "Disciplina para validação de creditação de formação complementar\nobrigatória, fora da área de computação, obtida por aprovação em\ndisciplina cursada em outra IES.\r"
- },
- {
-  "Codigo": "TMP0103",
-  "Nome": "Atividades de Extensão I",
-  "CargaHoraria": 150,
-  "Creditos": 5,
-  "Ementa": "Disciplina para validação de creditação de atividades de extensão através da participação em programas\/projetos de extensão."
- },
- {
-  "Codigo": "TMP0104",
-  "Nome": "Atividades de Extensão II ",
-  "CargaHoraria": 150,
-  "Creditos": 5,
-  "Ementa": "Disciplina para validação de creditação de atividades de extensão através da participação em programas\/projetos de extensão."
+  "Ementa": "Disciplina para validação de creditação de formação complementar obrigatória, fora da área de computação, obtida por aprovação em disciplina cursada em outra IES.",
+  "PreRequisitos": null,
+  "Eixo": "Formação Complementar",
+  "Sigla": "FC2"
  }
 ]
 }
