@@ -2,7 +2,7 @@
   "name": "sistema-apoio-bsi",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://Jowjowjowjowjow.github.io/samg/",
+  "homepage": "https://Jowjowjowjowjow.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
