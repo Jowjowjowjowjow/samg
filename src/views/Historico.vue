@@ -7,7 +7,7 @@
         </v-row>
         <v-row>
             <v-col cols="12">
-                <v-file-input label="Carregar histórico" variant="solo" ref="historico"
+                <v-file-input label="Usar o histórico emitido no portal do aluno em 'Relatórios >> Histórico Escolar CR - Aprovados (SIE)'" variant="solo" ref="historico"
                     @change="lerPlanilhaDisciplinas"></v-file-input>
             </v-col>
         </v-row>
