@@ -13,13 +13,13 @@
         </v-row>
         <CurriculoAtual :disciplinas-cursadas="progressoAlunoGrade" />
 
-        <CurriculoNovo :disciplinas-cursadas="progressoAlunoGradeNova" />
-
         <v-col class="text-center">
             <v-btn :disabled="!naoEquivalentes.length" text
                 @click="verDisciplinasNaoAproveitadas = !verDisciplinasNaoAproveitadas">Disciplinas não
                 aproveitadas</v-btn>
         </v-col>
+
+        <CurriculoNovo :disciplinas-cursadas="progressoAlunoGradeNova" />
 
         <v-row justify="center">
             <v-dialog v-model="verDisciplinasNaoAproveitadas" width="420px">
