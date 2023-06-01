@@ -304,6 +304,18 @@
   "nomeCurriculoAntigo": "Língua Brasileira de Sinais",
   "codigoCurriculoNovo": "HDI0142",
   "nomeCurriculoNovo": "Língua Brasileira de Sinais"
+ },
+ {
+  "codigoCurriculoAntigo": "TIN0117",
+  "nomeCurriculoAntigo": "Administração Financeira",
+  "codigoCurriculoNovo": "TIN0242",
+  "nomeCurriculoNovo": "Novas Formas de Economia"
+ },
+ {
+  "codigoCurriculoAntigo": "TIN0122",
+  "nomeCurriculoAntigo": "Processos de Software",
+  "codigoCurriculoNovo": "TIN0284",
+  "nomeCurriculoNovo": "Tópicos em Processos de Software"
  }
 ]
 }
