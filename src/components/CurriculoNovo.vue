@@ -32,6 +32,10 @@
                     <v-icon :icon="legenda.icon" :color="legenda.cor" class="mr-2" small></v-icon>
                     <span>{{ legenda.status === "Matricula"? "Disciplina por fazer": legenda.status  }}</span>
                 </v-list-item>
+                <v-list-item>
+                    <v-icon :icon="'$alert'" color="#E65100" small class="mr-2"></v-icon>
+                    <span>Necessário pedir dispensa na secretaria</span>
+                </v-list-item>
             </v-list>
         </v-col>
 

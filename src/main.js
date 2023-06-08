@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from './router'
 import VueGtag from "vue-gtag";
 
-createApp(App).use(VueGtag, {
-    config: { id: "G-78EWKSVY2T" }
-  }).mount("#app");
+// createApp(App).use(VueGtag, {
+//     config: { id: "G-78EWKSVY2T" }
+// }).mount("#app");
 
 import './assets/main.css'
 
@@ -16,7 +16,7 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
-import { mdiEye, mdiEyeOff, mdiCheckCircle, mdiCheckCircleOutline, mdiSquare  } from '@mdi/js'
+import { mdiEye, mdiEyeOff, mdiCheckCircle, mdiCheckCircleOutline, mdiSquare, mdiAlertCircle } from '@mdi/js'
 
 const vuetify = createVuetify({
     components,
@@ -29,7 +29,8 @@ const vuetify = createVuetify({
             offEye: mdiEyeOff,
             check: mdiCheckCircle,
             unCheck: mdiCheckCircleOutline,
-            square: mdiSquare
+            square: mdiSquare,
+            alert: mdiAlertCircle
         },
         sets: {
             mdi,
@@ -38,7 +39,7 @@ const vuetify = createVuetify({
 })
 
 const app = createApp(App)
-
+app.use(VueGtag, { config: { id: "G-78EWKSVY2T" } });
 app.use(vuetify)
 app.use(router)
 
