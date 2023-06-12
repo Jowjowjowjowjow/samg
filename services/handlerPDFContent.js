@@ -13,32 +13,33 @@ const regexPegaSemestre = new RegExp(/^[0-9]{1}/gmi);
 const regexPegaAno = new RegExp(/[0-9]{4}/gmi);
 
 const criaVetorDisciplinas = (disciplinas) => {
-   // console.log(disciplinas)
     const vetorDisciplinas = disciplinas.map(disciplina => ({
         codigo: disciplina.disciplina.match(regexDisciplina) && disciplina.disciplina.match(regexDisciplina).toString(),
         situacao: disciplina.disciplina.match(regexSituacao) && disciplina.disciplina.match(regexSituacao).toString(),
         trancamento: disciplina.disciplina.match(regexTrancamento) && disciplina.disciplina.match(regexTrancamento).toString(),
         nome: disciplina.disciplina.match(regexNomeDisciplina).toString().split(regexDisciplina)[1],
-        periodo: formataPeriodo(disciplina.periodo)
+        periodo: disciplina.periodo
+        //periodo: regexPegaCursoFerias.test(disciplina.periodo) ? disciplina.periodo.match(regexPegaAno).toString() + " Ferias" : disciplina.periodo.match(regexPegaAno).toString() + "." + periodo.match(regexPegaSemestre)
+        //periodo: formataPeriodo(disciplina.periodo)
         //periodo: disciplina.periodo.match(regexPegaPeriodo)?.toString() || disciplina.periodo.match(regexPegaCursoFerias)?.toString()
         //periodo: disciplina.periodo.match(regexPegaPeriodo)
     }))
 
-    //console.log("Vetor disciplinas ", vetorDisciplinas);
+    console.log("Vetor disciplinas ", vetorDisciplinas);
 
     return vetorDisciplinas;
 }
 
-function formataPeriodo(periodo) {
-    console.log("eita ", periodo)
+/*function formataPeriodo(periodo) {
+    //console.log("eita ", periodo)
     if(regexPegaPeriodo.test(periodo)) {
-        console.log("periodo ", periodo.toString().trim().match(regexPegaAno).toString().concat(".", periodo.match(regexPegaSemestre)))
-        return periodo.toString().trim().match(regexPegaAno).toString().concat(".", periodo.match(regexPegaSemestre));
+        //console.log("periodo ", periodo.toString().trim().match(regexPegaAno).toString().concat(".", periodo.match(regexPegaSemestre)))
+        return periodo.match(regexPegaAno).toString() + "." + periodo.match(regexPegaSemestre);
     } else if(regexPegaCursoFerias.test(periodo)) {
-        console.log("ferias ", periodo.match(regexPegaAno).toString().concat(" Ferias"))
-        return periodo.match(regexPegaAno).toString().concat(" Ferias");
+        //console.log("ferias ", periodo.match(regexPegaAno).toString().concat(" Ferias"))
+        return periodo.match(regexPegaAno).toString() + " Ferias";
     }
-}
+}*/
 
 const readPdf = async (uri) => {
 
@@ -57,11 +58,14 @@ const readPdf = async (uri) => {
                 continue;
             }
 
-            if (regexPegaPeriodo.test(splitted[i]) || regexPegaCursoFerias.test(splitted[i])){
-                periodo = splitted[i];
+            if (regexPegaPeriodo.test(splitted[i])){
+                periodo = splitted[i].match(regexPegaAno).toString() + "." + periodo.match(regexPegaSemestre)
             } 
-        
 
+            if (regexPegaCursoFerias.test(splitted[i])){
+                periodo = splitted[i].match(regexPegaAno).toString() + " Ferias" 
+            }
+        
             if (regexDisciplina.test(splitted[i]) && regexSituacao.test(splitted[i])) {
 
                 disciplinas.push({ disciplina: splitted[i], periodo });
@@ -78,7 +82,7 @@ const readPdf = async (uri) => {
                 disciplinas.push({ disciplina, periodo });
             }
         }
-
+        //console.log("Disciplinas: ", disciplinas)
         return criaVetorDisciplinas(disciplinas);
     } catch (err) {
         throw new Error(err);
