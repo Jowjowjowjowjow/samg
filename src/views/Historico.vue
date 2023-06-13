@@ -186,7 +186,7 @@ export default {
 
                 if (disciplinasEquivalentes.length) {
                     disciplinasEquivalentes.forEach(disciplinaEquivalente => {
-                        console.log("equivalente: ", disciplinaEquivalente, "disciplina: ", disciplina)
+                        //console.log("equivalente: ", disciplinaEquivalente, "disciplina: ", disciplina)
                         if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && disciplinaEquivalente?.tipoCorrespondencia?.toLowerCase().includes("equivalencia")) {
                             equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo, Nome: disciplinaEquivalente.nomeCurriculoNovo })
                         }
@@ -237,7 +237,7 @@ export default {
             })
 
             this.naoEquivalentes = [...naoAproveitadas]
-            console.log(this.naoEquivalentes);
+            //console.log(this.naoEquivalentes);
         },
 
         calculaDispensas() {

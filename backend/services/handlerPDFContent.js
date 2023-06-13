@@ -25,7 +25,7 @@ const criaVetorDisciplinas = (disciplinas) => {
         //periodo: disciplina.periodo.match(regexPegaPeriodo)
     }))
 
-    console.log("Vetor disciplinas ", vetorDisciplinas);
+    //console.log("Vetor disciplinas ", vetorDisciplinas);
 
     return vetorDisciplinas;
 }
