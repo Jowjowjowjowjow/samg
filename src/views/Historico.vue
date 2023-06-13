@@ -125,7 +125,8 @@ export default {
                     Ementa: null,
                     PreRequisitos: null,
                     Situacao: "Aprovado",
-                    Tipo: "Eletiva"
+                    Tipo: "Eletiva",
+                    Periodo: discAluno.periodo
                 }).filter(disciplina => disciplina));
 
 
@@ -185,8 +186,12 @@ export default {
 
                 if (disciplinasEquivalentes.length) {
                     disciplinasEquivalentes.forEach(disciplinaEquivalente => {
-                        if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa"))) {
-                            equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo })
+                        console.log("equivalente: ", disciplinaEquivalente, "disciplina: ", disciplina)
+                        if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && disciplinaEquivalente?.tipoCorrespondencia?.toLowerCase().includes("equivalencia")) {
+                            equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo, Nome: disciplinaEquivalente.nomeCurriculoNovo })
+                        }
+                        if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && disciplinaEquivalente?.tipoCorrespondencia?.toLowerCase().includes("dispensa") && disciplina?.Periodo === disciplinaEquivalente?.periodo) {
+                            equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo, Nome: disciplinaEquivalente.nomeCurriculoNovo, Situacao: "Solicitar dispensa" })
                         }
                     })
                 } else {
@@ -218,7 +223,8 @@ export default {
             }
 
             this.progressoAlunoGradeNova = this.gradeNova.map(item => {
-                if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Dispensa sem nota" }
+                //if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Dispensa sem nota" }
+                if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Solicitar dispensa" }
 
                 const disciplina = equivalencias.find(equivalencia => equivalencia.Codigo === item.Codigo)
 

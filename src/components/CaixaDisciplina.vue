@@ -19,13 +19,13 @@ export default {
             required: true,
             default: () => { }
         },
-        status: { type: Object, default: () => ({ ver: false, cor: "" }) },
+        status: { type: Object, default: () => ({ ver: false, cor: "", solicitarDispensa: false }) },
         cor: { type: String, default: () => '' },
         eixo: { type: String, default: () => '' }
     },
     computed: {
         dispensa() {
-            return this.status.cor === "yellow";
+            return this.status.solicitarDispensa === true;
         },
         textoDispensa(){
             return "É necessário o pedido de dispensa na secretaria do curso."
