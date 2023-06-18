@@ -48,6 +48,7 @@ import DetalhesDisciplina from '../components/DetalhesDisciplina.vue';
 import instance from '../api/instance';
 import CurriculoNovo from '../components/CurriculoNovo.vue';
 import CurriculoAtual from '../components/CurriculoAtual.vue';
+import { mdiTagPlus } from '@mdi/js';
 
 
 export default {
@@ -125,7 +126,8 @@ export default {
                     Ementa: null,
                     PreRequisitos: null,
                     Situacao: "Aprovado",
-                    Tipo: "Eletiva"
+                    Tipo: "Eletiva",
+                    Periodo: discAluno.periodo
                 }).filter(disciplina => disciplina));
 
 
@@ -185,8 +187,12 @@ export default {
 
                 if (disciplinasEquivalentes.length) {
                     disciplinasEquivalentes.forEach(disciplinaEquivalente => {
-                        if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa"))) {
-                            equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo })
+                        //console.log("equivalente: ", disciplinaEquivalente, "disciplina: ", disciplina)
+                        if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && disciplinaEquivalente?.tipoCorrespondencia?.toLowerCase().includes("equivalencia")) {
+                            equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo, Nome: disciplinaEquivalente.nomeCurriculoNovo })
+                        }
+                        if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && disciplinaEquivalente?.tipoCorrespondencia?.toLowerCase().includes("dispensa") && disciplina?.Periodo === disciplinaEquivalente?.periodo) {
+                            equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo, Nome: disciplinaEquivalente.nomeCurriculoNovo, Situacao: "Solicitar dispensa" })
                         }
                     })
                 } else {
@@ -217,8 +223,13 @@ export default {
                 })
             }
 
+            if (eletivas.length){
+                eletivas.forEach(eletiva => naoAproveitadas.push(eletiva));
+            }
+
             this.progressoAlunoGradeNova = this.gradeNova.map(item => {
-                if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Dispensa sem nota" }
+                //if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Dispensa sem nota" }
+                if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Solicitar dispensa" }
 
                 const disciplina = equivalencias.find(equivalencia => equivalencia.Codigo === item.Codigo)
 
@@ -226,12 +237,20 @@ export default {
                     const optativa = optativasGradeNova.shift();
                     return { ...optativa, PeriodoRecomendado: item.PeriodoRecomendado, Tipo: item.Tipo, Sigla: optativa.Sigla || item.Sigla }
                 }
+
                 if (disciplina) return { ...item, Situacao: disciplina.Situacao }
                 return { ...item, Situacao: item.Situacao || "Matrícula" }
             })
 
+            if(optativasGradeNova.length){
+                optativasGradeNova.map(disciplinaOptativaGradeNova => {
+                    const disciplinaOptativaNaoAproveitada = this.equivalencias.find(equivalencia => disciplinaOptativaGradeNova.Codigo == equivalencia.codigoCurriculoNovo)
+                    naoAproveitadas.push ({...disciplinaOptativaNaoAproveitada, Codigo: disciplinaOptativaNaoAproveitada.codigoCurriculoAntigo, Nome: disciplinaOptativaNaoAproveitada.nomeCurriculoAntigo})
+                })
+            }
+
             this.naoEquivalentes = [...naoAproveitadas]
-            console.log(this.naoEquivalentes);
+            //console.log(this.naoEquivalentes);
         },
 
         calculaDispensas() {
