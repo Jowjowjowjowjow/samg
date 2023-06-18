@@ -231,20 +231,6 @@
             "tipoCorrespondencia": "equivalencia"
         },
         {
-            "codigoCurriculoAntigo": "TIN0151",
-            "nomeCurriculoAntigo": "Formação Complementar 1",
-            "codigoCurriculoNovo": "TIN0151",
-            "nomeCurriculoNovo": "Formação Complementar I",
-            "tipoCorrespondencia": "equivalencia"
-        },
-        {
-            "codigoCurriculoAntigo": "TIN0152",
-            "nomeCurriculoAntigo": "Formação Complementar 2",
-            "codigoCurriculoNovo": "TIN0152",
-            "nomeCurriculoNovo": "Formação Complementar II",
-            "tipoCorrespondencia": "equivalencia"
-        },
-        {
             "codigoCurriculoAntigo": "TIN0135",
             "nomeCurriculoAntigo": "Administração de Bancos de Dados",
             "codigoCurriculoNovo": "TIN0135",

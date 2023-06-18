@@ -105,20 +105,22 @@ export default {
             const obrigatorias = this.disciplinasObrigatoriasCurriculoAntigo.map(disciplinaCurriculoAntigo => {
                 const disciplina = this.disciplinasAlunoCurriculoAntigo.findLast(discAluno => discAluno.codigo === disciplinaCurriculoAntigo.Codigo)
                 if (disciplina) return { ...disciplinaCurriculoAntigo, Situacao: disciplina.situacao || disciplina.trancamento }
+                
             }).filter(disciplina => disciplina)
 
             //Pego somente as optativas que o aluno passou
             const optativas = this.preencheOptativas(this.disciplinasOptativasCurriculoAntigo.map(disciplinaOptativaCurriculoAntigo => {
                 const disciplina = this.disciplinasAlunoCurriculoAntigo.findLast(discAluno => discAluno.codigo === disciplinaOptativaCurriculoAntigo.Codigo)
 
-                if (disciplina && disciplina.situacao === "Aprovado") return { ...disciplinaOptativaCurriculoAntigo, Situacao: disciplina.situacao, Tipo: "Optativa" }
+                if (disciplina && (disciplina.situacao === "Aprovado" || disciplina.situacao.contains("Dispensa"))) return { ...disciplinaOptativaCurriculoAntigo, Situacao: disciplina.situacao, Tipo: "Optativa" }
+               
             }).filter(disciplina => disciplina));
 
             //Pego somente as eletivas que o aluno passou
             const eletivas = this.preencheEletivas(this.disciplinasAlunoCurriculoAntigo.map(discAluno =>
                 !obrigatorias.some(disciplina => disciplina?.Codigo === discAluno.codigo)
                 && !optativas.some(disciplina => disciplina?.Codigo === discAluno.codigo)
-                && discAluno.situacao === "Aprovado" && {
+                && (discAluno.situacao === "Aprovado" || discAluno.situacao.contains("Dispensa")) && {
                     Codigo: discAluno.codigo,
                     Nome: discAluno.nome,
                     CargaHoraria: 60,
@@ -249,7 +251,7 @@ export default {
                 })
             }
 
-            this.naoEquivalentes = [...naoAproveitadas]
+            this.naoEquivalentes = [...this.naoEquivalentes, ...naoAproveitadas]
             //console.log(this.naoEquivalentes);
         },
 
