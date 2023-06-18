@@ -48,6 +48,7 @@ import DetalhesDisciplina from '../components/DetalhesDisciplina.vue';
 import instance from '../api/instance';
 import CurriculoNovo from '../components/CurriculoNovo.vue';
 import CurriculoAtual from '../components/CurriculoAtual.vue';
+import { mdiTagPlus } from '@mdi/js';
 
 
 export default {
@@ -222,6 +223,10 @@ export default {
                 })
             }
 
+            if (eletivas.length){
+                eletivas.forEach(eletiva => naoAproveitadas.push(eletiva));
+            }
+
             this.progressoAlunoGradeNova = this.gradeNova.map(item => {
                 //if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Dispensa sem nota" }
                 if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Solicitar dispensa" }
@@ -232,9 +237,17 @@ export default {
                     const optativa = optativasGradeNova.shift();
                     return { ...optativa, PeriodoRecomendado: item.PeriodoRecomendado, Tipo: item.Tipo, Sigla: optativa.Sigla || item.Sigla }
                 }
+
                 if (disciplina) return { ...item, Situacao: disciplina.Situacao }
                 return { ...item, Situacao: item.Situacao || "Matrícula" }
             })
+
+            if(optativasGradeNova.length){
+                optativasGradeNova.map(disciplinaOptativaGradeNova => {
+                    const disciplinaOptativaNaoAproveitada = this.equivalencias.find(equivalencia => disciplinaOptativaGradeNova.Codigo == equivalencia.codigoCurriculoNovo)
+                    naoAproveitadas.push ({...disciplinaOptativaNaoAproveitada, Codigo: disciplinaOptativaNaoAproveitada.codigoCurriculoAntigo, Nome: disciplinaOptativaNaoAproveitada.nomeCurriculoAntigo})
+                })
+            }
 
             this.naoEquivalentes = [...naoAproveitadas]
             //console.log(this.naoEquivalentes);
