@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'https://samg-api.projetosccetunirio.com.br/',
+    baseURL: 'https://localhost/api',
 });
 
 export default instance
