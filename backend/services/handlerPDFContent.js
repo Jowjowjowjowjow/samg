@@ -19,27 +19,9 @@ const criaVetorDisciplinas = (disciplinas) => {
         trancamento: disciplina.disciplina.match(regexTrancamento) && disciplina.disciplina.match(regexTrancamento).toString(),
         nome: disciplina.disciplina.match(regexNomeDisciplina).toString().split(regexDisciplina)[1],
         periodo: disciplina.periodo
-        //periodo: regexPegaCursoFerias.test(disciplina.periodo) ? disciplina.periodo.match(regexPegaAno).toString() + " Ferias" : disciplina.periodo.match(regexPegaAno).toString() + "." + periodo.match(regexPegaSemestre)
-        //periodo: formataPeriodo(disciplina.periodo)
-        //periodo: disciplina.periodo.match(regexPegaPeriodo)?.toString() || disciplina.periodo.match(regexPegaCursoFerias)?.toString()
-        //periodo: disciplina.periodo.match(regexPegaPeriodo)
     }))
-
-    //console.log("Vetor disciplinas ", vetorDisciplinas);
-
     return vetorDisciplinas;
 }
-
-/*function formataPeriodo(periodo) {
-    //console.log("eita ", periodo)
-    if(regexPegaPeriodo.test(periodo)) {
-        //console.log("periodo ", periodo.toString().trim().match(regexPegaAno).toString().concat(".", periodo.match(regexPegaSemestre)))
-        return periodo.match(regexPegaAno).toString() + "." + periodo.match(regexPegaSemestre);
-    } else if(regexPegaCursoFerias.test(periodo)) {
-        //console.log("ferias ", periodo.match(regexPegaAno).toString().concat(" Ferias"))
-        return periodo.match(regexPegaAno).toString() + " Ferias";
-    }
-}*/
 
 const readPdf = async (uri) => {
 
@@ -53,7 +35,6 @@ const readPdf = async (uri) => {
 
         let disciplinas = [];
         for (let i = 0; i < splitted.length; i++) {
-            //console.log(splitted[i], i)
             if (regexTrancamento.test(splitted[i])) {
                 continue;
             }
@@ -67,7 +48,6 @@ const readPdf = async (uri) => {
             }
         
             if (regexDisciplina.test(splitted[i]) && regexSituacao.test(splitted[i])) {
-
                 disciplinas.push({ disciplina: splitted[i], periodo });
                 continue;
             }
@@ -82,11 +62,9 @@ const readPdf = async (uri) => {
                 disciplinas.push({ disciplina, periodo });
             }
         }
-        //console.log("Disciplinas: ", disciplinas)
         return criaVetorDisciplinas(disciplinas);
     } catch (err) {
         throw new Error(err);
     }
 }
-
 module.exports = readPdf;
