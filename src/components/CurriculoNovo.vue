@@ -32,6 +32,10 @@
                     <v-icon :icon="legenda.icon" :color="legenda.cor" class="mr-2" small></v-icon>
                     <span>{{ legenda.status === "Matricula"? "Disciplina por fazer": legenda.status  }}</span>
                 </v-list-item>
+                <v-list-item>
+                    <v-icon :icon="'$alert'" color="#E65100" small class="mr-2"></v-icon>
+                    <span>Necessário pedir dispensa na secretaria</span>
+                </v-list-item>
             </v-list>
         </v-col>
 
@@ -56,12 +60,12 @@ const EIXO_COR = [
     { eixo: "Desenvolvimento de Software para SI (Programação e Algoritmos)", cor: "#64B5F6" },
     { eixo: "Gestão de SI e TI, Empreendedorismo e Inovação", cor: "#7E57C2" },
     { eixo: "Visão Sistêmica (Fundamentos de Matemática)", cor: "#FFCC80" },
-    { eixo: "Visão Sistêmica (Sistemas de Informação)", cor: "#FFEE58" },
+    { eixo: "Visão Sistêmica (Sistemas de Informação)", cor: "#FFFF00" },
 ]
 
 const EIXO_COR_STATUS = [
     { status: "Aprovado / Aprovado sem nota", cor: "green", icon: "$check" },
-    { status: "Dispensa com nota / Dispensa sem nota", cor: "yellow", icon: "$check" },
+    { status: "Dispensa com nota / Dispensa sem nota", cor: "#FDD835", icon: "$check" },
     { status: "Reprovado sem nota", cor: "orange", icon: "$check" },
     { status: "Reprovado por nota / Reprovado por falta", cor: "red", icon: "$check" },
     { status: "Matricula", cor: "Black", icon: "$unCheck" },
@@ -99,23 +103,25 @@ export default {
                 case "reprovado sem nota": return "orange";
                 case "reprovado por falta": return "red";
                 case "aprovado sem nota": return "green";
-                case "dispensa sem nota": return "yellow";
-                case "dispensa com nota": return "yellow";
+                case "dispensa sem nota": return "#FDD835";
+                case "dispensa com nota": return "#FDD835";
+                case "solicitar dispensa": return "#FDD835";
                 case "matrícula": return '#BDBDBD';
                 default: return '#BDBDBD';
             }
         },
         status(disciplina) {
-            if (!disciplina || !disciplina.Situacao) return { ver: "uncheck", cor: "" };
+            if (!disciplina || !disciplina.Situacao) return { ver: "uncheck", cor: "", solicitarDispensa: false };
             switch (disciplina.Situacao.toLowerCase()) {
-                case "aprovado": return { ver: "check", cor: "green" };
-                case "reprovado sem nota": return { ver: "uncheck", cor: "" };
-                case "reprovado por falta": return { ver: "uncheck", cor: "" };
-                case "aprovado sem nota": return { ver: "check", cor: "green" };
-                case "dispensa sem nota": return { ver: "check", cor: "yellow" };
-                case "dispensa com nota": return { ver: "check", cor: "yellow" };
-                case "matrícula": return { ver: "uncheck", cor: "" };
-                default: return { ver: "uncheck", cor: "" };
+                case "aprovado": return { ver: "check", cor: "green", solicitarDispensa: false };
+                case "reprovado sem nota": return { ver: "uncheck", cor: "", solicitarDispensa: false };
+                case "reprovado por falta": return { ver: "uncheck", cor: "", solicitarDispensa: false };
+                case "aprovado sem nota": return { ver: "check", cor: "green", solicitarDispensa: false };
+                case "dispensa sem nota": return { ver: "check", cor: "#FDD835", solicitarDispensa: false };
+                case "dispensa com nota": return { ver: "check", cor: "#FDD835", solicitarDispensa: false };
+                case "solicitar dispensa": return { ver: "check", cor: "#FDD835", solicitarDispensa: true };
+                case "matrícula": return { ver: "uncheck", cor: "", solicitarDispensa: false };
+                default: return { ver: "uncheck", cor: "", solicitarDispensa: false };
             }
         },
         pegaCorEixo(eixo){
