@@ -38,8 +38,8 @@ import DetalhesDisciplina from './DetalhesDisciplina.vue';
 const EIXO_COR_STATUS = [
     { status: "Aprovado / Aprovado sem nota", cor: "green", icon: "$check" },
     { status: "Dispensa com nota / Dispensa sem nota", cor: "yellow", icon: "$check" },
-    { status: "Reprovado sem nota", cor: "orange", icon: "$check" },
-    { status: "Reprovado por nota / Reprovado por falta", cor: "red", icon: "$check" },
+    { status: "Reprovado sem nota", cor: "orange", icon: "$x" },
+    { status: "Reprovado por nota / Reprovado por falta", cor: "red", icon: "$x" },
     { status: "Matricula", cor: "black", icon: "$unCheck" },
 ]
 
@@ -83,8 +83,8 @@ export default {
             if (!disciplina || !disciplina.Situacao) return { ver: "uncheck", cor: "" };
             switch (disciplina.Situacao.toLowerCase()) {
                 case "aprovado": return { ver: "check", cor: "green" };
-                case "reprovado sem nota": return { ver: "uncheck", cor: "" };
-                case "reprovado por falta": return { ver: "uncheck", cor: "" };
+                case "reprovado sem nota": return { ver: "x", cor: "" };
+                case "reprovado por falta": return { ver: "x", cor: "" };
                 case "aprovado sem nota": return { ver: "check", cor: "green" };
                 case "dispensa sem nota": return { ver: "check", cor: "yellow" };
                 case "dispensa com nota": return { ver: "check", cor: "yellow" };

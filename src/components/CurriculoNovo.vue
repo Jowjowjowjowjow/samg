@@ -66,8 +66,8 @@ const EIXO_COR = [
 const EIXO_COR_STATUS = [
     { status: "Aprovado / Aprovado sem nota", cor: "green", icon: "$check" },
     { status: "Dispensa com nota / Dispensa sem nota", cor: "#FDD835", icon: "$check" },
-    { status: "Reprovado sem nota", cor: "orange", icon: "$check" },
-    { status: "Reprovado por nota / Reprovado por falta", cor: "red", icon: "$check" },
+    { status: "Reprovado sem nota", cor: "orange", icon: "$x" },
+    { status: "Reprovado por nota / Reprovado por falta", cor: "red", icon: "$x" },
     { status: "Matricula", cor: "Black", icon: "$unCheck" },
 ]
 
@@ -114,8 +114,8 @@ export default {
             if (!disciplina || !disciplina.Situacao) return { ver: "uncheck", cor: "", solicitarDispensa: false };
             switch (disciplina.Situacao.toLowerCase()) {
                 case "aprovado": return { ver: "check", cor: "green", solicitarDispensa: false };
-                case "reprovado sem nota": return { ver: "uncheck", cor: "", solicitarDispensa: false };
-                case "reprovado por falta": return { ver: "uncheck", cor: "", solicitarDispensa: false };
+                case "reprovado sem nota": return { ver: "x", cor: "", solicitarDispensa: false };
+                case "reprovado por falta": return { ver: "x", cor: "", solicitarDispensa: false };
                 case "aprovado sem nota": return { ver: "check", cor: "green", solicitarDispensa: false };
                 case "dispensa sem nota": return { ver: "check", cor: "#FDD835", solicitarDispensa: false };
                 case "dispensa com nota": return { ver: "check", cor: "#FDD835", solicitarDispensa: false };
