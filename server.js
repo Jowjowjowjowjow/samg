@@ -32,7 +32,7 @@ fastify.post('/upload', async (req, reply) => {
     const disciplinas = await readPdf(data.filename);
     try {
         fs.unlinkSync(path.resolve(__dirname, data.filename));
-        console.log('successfully deleted ' + data.filename);
+        //console.log('successfully deleted ' + data.filename);
       } catch (err) {
         throw new Error(err);
       }
@@ -40,7 +40,7 @@ fastify.post('/upload', async (req, reply) => {
 })
 
 // Run the server!
-fastify.listen({ port: 3000 }, function (err, address) {
+fastify.listen({ port: 80, host: '0.0.0.0' }, function (err, address) {
     if (err) {
         fastify.log.error(err)
         process.exit(1)
