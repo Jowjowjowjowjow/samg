@@ -48,7 +48,6 @@ import DetalhesDisciplina from '../components/DetalhesDisciplina.vue';
 import instance from '../api/instance';
 import CurriculoNovo from '../components/CurriculoNovo.vue';
 import CurriculoAtual from '../components/CurriculoAtual.vue';
-import { mdiTagPlus } from '@mdi/js';
 
 
 export default {
@@ -105,22 +104,20 @@ export default {
             const obrigatorias = this.disciplinasObrigatoriasCurriculoAntigo.map(disciplinaCurriculoAntigo => {
                 const disciplina = this.disciplinasAlunoCurriculoAntigo.findLast(discAluno => discAluno.codigo === disciplinaCurriculoAntigo.Codigo)
                 if (disciplina) return { ...disciplinaCurriculoAntigo, Situacao: disciplina.situacao || disciplina.trancamento }
-                
             }).filter(disciplina => disciplina)
 
             //Pego somente as optativas que o aluno passou
             const optativas = this.preencheOptativas(this.disciplinasOptativasCurriculoAntigo.map(disciplinaOptativaCurriculoAntigo => {
                 const disciplina = this.disciplinasAlunoCurriculoAntigo.findLast(discAluno => discAluno.codigo === disciplinaOptativaCurriculoAntigo.Codigo)
 
-                if (disciplina && (disciplina.situacao === "Aprovado" || disciplina.situacao.contains("Dispensa"))) return { ...disciplinaOptativaCurriculoAntigo, Situacao: disciplina.situacao, Tipo: "Optativa" }
-               
+                if (disciplina && disciplina.situacao === "Aprovado") return { ...disciplinaOptativaCurriculoAntigo, Situacao: disciplina.situacao, Tipo: "Optativa" }
             }).filter(disciplina => disciplina));
 
             //Pego somente as eletivas que o aluno passou
             const eletivas = this.preencheEletivas(this.disciplinasAlunoCurriculoAntigo.map(discAluno =>
                 !obrigatorias.some(disciplina => disciplina?.Codigo === discAluno.codigo)
                 && !optativas.some(disciplina => disciplina?.Codigo === discAluno.codigo)
-                && (discAluno.situacao === "Aprovado" || discAluno.situacao.contains("Dispensa")) && {
+                && discAluno.situacao === "Aprovado" && {
                     Codigo: discAluno.codigo,
                     Nome: discAluno.nome,
                     CargaHoraria: 60,
@@ -189,7 +186,7 @@ export default {
 
                 if (disciplinasEquivalentes.length) {
                     disciplinasEquivalentes.forEach(disciplinaEquivalente => {
-                        //console.log("equivalente: ", disciplinaEquivalente, "disciplina: ", disciplina)
+                        console.log("equivalente: ", disciplinaEquivalente, "disciplina: ", disciplina)
                         if (disciplinaEquivalente && (disciplina?.Situacao.toLowerCase().includes("aprovado") || disciplina?.Situacao.toLowerCase().includes("dispensa")) && disciplinaEquivalente?.tipoCorrespondencia?.toLowerCase().includes("equivalencia")) {
                             equivalencias.push({ ...disciplina, Codigo: disciplinaEquivalente.codigoCurriculoNovo, Nome: disciplinaEquivalente.nomeCurriculoNovo })
                         }
@@ -225,10 +222,6 @@ export default {
                 })
             }
 
-            if (eletivas.length){
-                eletivas.forEach(eletiva => naoAproveitadas.push(eletiva));
-            }
-
             this.progressoAlunoGradeNova = this.gradeNova.map(item => {
                 //if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Dispensa sem nota" }
                 if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Solicitar dispensa" }
@@ -239,20 +232,12 @@ export default {
                     const optativa = optativasGradeNova.shift();
                     return { ...optativa, PeriodoRecomendado: item.PeriodoRecomendado, Tipo: item.Tipo, Sigla: optativa.Sigla || item.Sigla }
                 }
-
                 if (disciplina) return { ...item, Situacao: disciplina.Situacao }
                 return { ...item, Situacao: item.Situacao || "Matrícula" }
             })
 
-            if(optativasGradeNova.length){
-                optativasGradeNova.map(disciplinaOptativaGradeNova => {
-                    const disciplinaOptativaNaoAproveitada = this.equivalencias.find(equivalencia => disciplinaOptativaGradeNova.Codigo == equivalencia.codigoCurriculoNovo)
-                    naoAproveitadas.push ({...disciplinaOptativaNaoAproveitada, Codigo: disciplinaOptativaNaoAproveitada.codigoCurriculoAntigo, Nome: disciplinaOptativaNaoAproveitada.nomeCurriculoAntigo})
-                })
-            }
-
-            this.naoEquivalentes = [...this.naoEquivalentes, ...naoAproveitadas]
-            //console.log(this.naoEquivalentes);
+            this.naoEquivalentes = [...naoAproveitadas]
+            console.log(this.naoEquivalentes);
         },
 
         calculaDispensas() {
