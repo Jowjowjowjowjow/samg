@@ -223,7 +223,7 @@ export default {
             }
 
             this.progressoAlunoGradeNova = this.gradeNova.map(item => {
-                if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Solicitar dispensa" }
+                if (materiasDispensadas[0].some(codigo => codigo === item.Codigo)) return { ...item, Situacao: "Dispensa sem nota" }
                 const disciplina = equivalencias.find(equivalencia => equivalencia.Codigo === item.Codigo)
 
                 if (item.Tipo.includes("Optativa") && item.Codigo.includes("OPT") && optativasGradeNova.length) {
