@@ -12,14 +12,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://samg-api.projetosccetunirio.com.br/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      }
-    }
   }
 })
