@@ -108,7 +108,7 @@ export default {
             const optativas = this.preencheOptativas(this.disciplinasOptativasCurriculoAntigo.map(disciplinaOptativaCurriculoAntigo => {
                 const disciplina = this.disciplinasAlunoCurriculoAntigo.findLast(discAluno => discAluno.codigo === disciplinaOptativaCurriculoAntigo.Codigo)
 
-                if (disciplina && (disciplina.situacao === "Aprovado" || disciplina.situacao.contains("Dispensa"))) return { ...disciplinaOptativaCurriculoAntigo, Situacao: disciplina.situacao, Tipo: "Optativa" }
+                if (disciplina && (disciplina.situacao === "Aprovado" || disciplina.situacao.includes("Dispensa"))) return { ...disciplinaOptativaCurriculoAntigo, Situacao: disciplina.situacao, Tipo: "Optativa" }
                
             }).filter(disciplina => disciplina));
 
@@ -116,7 +116,7 @@ export default {
             const eletivas = this.preencheEletivas(this.disciplinasAlunoCurriculoAntigo.map(discAluno =>
                 !obrigatorias.some(disciplina => disciplina?.Codigo === discAluno.codigo)
                 && !optativas.some(disciplina => disciplina?.Codigo === discAluno.codigo)
-                && (discAluno.situacao === "Aprovado" || discAluno.situacao.contains("Dispensa")) && {
+                && (discAluno.situacao === "Aprovado" || discAluno.situacao.includes("Dispensa")) && {
                     Codigo: discAluno.codigo,
                     Nome: discAluno.nome,
                     CargaHoraria: 60,
