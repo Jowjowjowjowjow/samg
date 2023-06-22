@@ -40,7 +40,7 @@ const readPdf = async (uri) => {
             }
 
             if (regexPegaPeriodo.test(splitted[i])){
-                periodo = splitted[i].match(regexPegaAno).toString() + "." + periodo.match(regexPegaSemestre)
+                periodo = splitted[i].match(regexPegaAno).toString() + "." + splitted[i].match(regexPegaSemestre)
             } 
 
             if (regexPegaCursoFerias.test(splitted[i])){
