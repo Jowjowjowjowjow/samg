@@ -4,7 +4,8 @@
             "codigoCurriculoAntigo": "TME0015",
             "nomeCurriculoAntigo": "Álgebra Linear",
             "codigoCurriculoNovo": "TMT0044",
-            "nomeCurriculoNovo": "Álgebra Linear"
+            "nomeCurriculoNovo": "Álgebra Linear",
+            "tipoCorrespondencia": "equivalencia"
         },
         {
             "codigoCurriculoAntigo": "TIN0118",

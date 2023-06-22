@@ -100,15 +100,16 @@ export default {
             //Pego somente as obrigatórias
             const obrigatorias = this.disciplinasObrigatoriasCurriculoAntigo.map(disciplinaCurriculoAntigo => {
                 const disciplina = this.disciplinasAlunoCurriculoAntigo.findLast(discAluno => discAluno.codigo === disciplinaCurriculoAntigo.Codigo)
-                if (disciplina) return { ...disciplinaCurriculoAntigo, Situacao: disciplina.situacao || disciplina.trancamento }
+                if (disciplina) return { ...disciplinaCurriculoAntigo, Situacao: disciplina.situacao || disciplina.trancamento, Periodo: disciplina.periodo }
                 
             }).filter(disciplina => disciplina)
 
+
             //Pego somente as optativas que o aluno passou
             const optativas = this.preencheOptativas(this.disciplinasOptativasCurriculoAntigo.map(disciplinaOptativaCurriculoAntigo => {
-                const disciplina = this.disciplinasAlunoCurriculoAntigo.findLast(discAluno => discAluno.codigo === disciplinaOptativaCurriculoAntigo.Codigo)
 
-                if (disciplina && (disciplina.situacao === "Aprovado" || disciplina.situacao.includes("Dispensa"))) return { ...disciplinaOptativaCurriculoAntigo, Situacao: disciplina.situacao, Tipo: "Optativa" }
+                const disciplina = this.disciplinasAlunoCurriculoAntigo.findLast(discAluno => discAluno.codigo === disciplinaOptativaCurriculoAntigo.Codigo)
+                if (disciplina && (disciplina.situacao.toLowerCase().includes("aprovado") || disciplina.situacao.toLowerCase().includes("dispensa"))) return { ...disciplinaOptativaCurriculoAntigo, Situacao: disciplina.situacao, Tipo: "Optativa", Periodo: disciplina.periodo }
                
             }).filter(disciplina => disciplina));
 
@@ -130,6 +131,7 @@ export default {
 
 
             this.historico = [...obrigatorias, ...optativas, ...eletivas]
+
             this.fazEquivalencias([...eletivas]);
             this.progressoAlunoGrade = this.grade.map(disciplina => {
 
@@ -180,6 +182,7 @@ export default {
             this.historico.map(disciplina => {
                 const codigo = disciplina.Codigo;
                 const disciplinasEquivalentes = this.equivalencias.filter(item => item.codigoCurriculoAntigo === codigo);
+                
 
                 if (disciplinasEquivalentes.length) {
                     disciplinasEquivalentes.forEach(disciplinaEquivalente => {
@@ -207,6 +210,7 @@ export default {
                     })
                 }
             }).filter(disciplina => disciplina)
+        
 
             if (eletivas.length) {
                 this.gradeNova = this.gradeNova.map(item => {
