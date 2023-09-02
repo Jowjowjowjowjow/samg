@@ -6,6 +6,7 @@ const fastifyMultipart = require('@fastify/multipart');
 const util = require('util');
 const { pipeline } = require('stream');
 const readPdf = require('./services/handlerPDFContent');
+const readPdfIntegralizacao = require('./services/handlerPDFIntegralizacaoContent');
 
 
 const pump = util.promisify(pipeline);
@@ -37,6 +38,19 @@ fastify.post('/upload', async (req, reply) => {
       }
     reply.send({ disciplinas })
 })
+
+fastify.post('/uploadIntegralizacao', async (req, reply) => {
+    const data = await req.file()
+    await pump(data.file, fs.createWriteStream(data.filename))
+    const disciplinas = await readPdfIntegralizacao(data.filename);
+    try {
+        fs.unlinkSync(path.resolve(__dirname, data.filename));
+      } catch (err) {
+        throw new Error(err);
+      }
+    reply.send({ disciplinas })
+})
+
 
 // Run the server!
 fastify.listen({ port: 80, host: '0.0.0.0' }, function (err, address) {
