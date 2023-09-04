@@ -6,7 +6,7 @@ const regexDisciplina = new RegExp(/^[a-zA-Z]{3}[0-9]{4}/mi);
 const regexSituacao = new RegExp(/(aprovado.*|reprovado.*|matrícula.*|trancamento.*|dispensa.*)$/gmi);
 const regexTrancamento = new RegExp(/(trancamento.*)$/gmi);
 //Melhorar, casos de nomes de disciplina muito grandes e que acabam quebrando em duas linhas não estão sendo contemplados.
-const regexNomeDisciplina = new RegExp(/[a-zA-Z]{3}[0-9]{4}([A-Za-záãÁÀÃÂÉÈÊÍÌÎÓÒÕÔÚÙÛÇ\s]*)/gmi);
+const regexNomeDisciplina = new RegExp(/[a-zA-Z]{3}[0-9]{4}([A-Za-záãÁÀÃÂÉÈÊÍÌÎÓÒÕÔÚÙÛÇç\s]*)/gmi);
 const regexPegaPeriodo = new RegExp(/([0-9]°. semestre de [0-9]{4})/gmi);
 const regexPegaCursoFerias = new RegExp(/(Curso de Férias de [0-9]{4})/gmi);
 const regexPegaSemestre = new RegExp(/^[0-9]{1}/gmi);

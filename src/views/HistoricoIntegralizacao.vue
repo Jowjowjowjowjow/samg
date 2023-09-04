@@ -46,11 +46,11 @@ export default {
 
     methods: {
         async lerPlanilhaDisciplinas() {
-            const arquivo = this.$refs.historico.files[0];
+            const arquivo = this.$refs.historicoIntegralizacao.files[0];
             const formData = new FormData();
             formData.append('file', arquivo);
             try {
-                const jsonDisciplinasAluno = await instance.post("upload", formData, { headers: { 'Content-Type': 'multipart/form-data;boundary=boundary' } })
+                const jsonDisciplinasAluno = await instance.post("uploadIntegralizacao", formData, { headers: { 'Content-Type': 'multipart/form-data;boundary=boundary' } })
                 this.disciplinasCursadasCurriculoNovo = JSON.parse(JSON.stringify(jsonDisciplinasAluno.data.disciplinas));
                 this.lerHistorico();
             } catch (error) {
@@ -235,7 +235,7 @@ export default {
             return [dispensas, utilizadas]
         }
     },
-    components: { CaixaDisciplina, DetalhesDisciplina, CurriculoNovo, CurriculoAtual }
+    components: { CaixaDisciplina, DetalhesDisciplina, CurriculoNovo }
 }
 </script>
 
