@@ -2,14 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const pdfParse = require('pdf-parse');
 
-const regexCodigoDisciplina = new RegExp(/[a-zA-Z]{3}[0-9]{4}/mi);
-const regexSituacao = new RegExp(/(Vencido|Não Vencido|Matrícula)/gmi);
+const regexCodigoDisciplina = new RegExp(/[a-zA-Z]{3}[0-9]{4}/i);
+const regexSituacao = new RegExp(/(Vencido|Não Vencido|Matricula\/Cursand)/gmi);
 //Melhorar, casos de nomes de disciplina muito grandes e que acabam quebrando em duas linhas não estão sendo contemplados.
-const regexNomeDisciplina = new RegExp(/([A-Za-záãÁÀÃÂÉÈÊÍÌÎÓÒÕÔÚÙÛÇç\s]*)[a-zA-Z]{3}[0-9]{4}/gmi);
-const regexPegaPeriodo = new RegExp(/([0-9]°. semestre - [0-9]{4})/gmi);
-/*const regexPegaCursoFerias = new RegExp(/(Curso de Férias de [0-9]{4})/gmi);*/
-const regexPegaSemestre = new RegExp(/^[0-9]{1}/gmi);
-const regexPegaAno = new RegExp(/[0-9]{4}/gmi);
+const regexNomeDisciplina = new RegExp(/([A-Za-záãÁÀÃÂÉÈÊéàêÍÌÎÓÒÕÔóí\-ÚÙÛÇç\s]*)[a-zA-Z]{3}[0-9]{4}/i);
 
 const criaVetorDisciplinas = (disciplinas) => {
     const vetorDisciplinas = disciplinas.map(disciplina => ({
@@ -27,16 +23,14 @@ const readPdfIntegralizacao = async (uri) => {
 
     try {
         const data = await pdfParse(buffer);
-
         const splitted = data.text.split('\n')
         console.log('splitted:', splitted)
 
         let disciplinas = [];
         for (let i = 0; i < splitted.length; i++) {
-        
-            if (regexCodigoDisciplina.test(splitted[i]) && regexSituacao.test(splitted[i])) {
+            console.log('Linha: ', splitted[i], ' regexCodigoDisciplina: ', regexCodigoDisciplina.test(splitted[i]), ' regexSituacao: ', regexSituacao.test(splitted[i]), ' regexNome: ', regexNomeDisciplina.test(splitted[i]) )
+            if (regexCodigoDisciplina.test(splitted[i])) {
                 disciplinas.push({ disciplina: splitted[i] });
-                continue;
             }
 
         }
