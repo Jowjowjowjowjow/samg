@@ -60,7 +60,7 @@ const EIXO_COR = [
 
 const EIXO_COR_STATUS = [
     { status: "Vencido", cor: "green", icon: "$check" },
-    { status: "Matricula", cor: "orange", icon: "$x" },
+    { status: "Matricula/Cursand", cor: "orange", icon: "$unCheck" },
     { status: "Não vencido", cor: "Black", icon: "$unCheck" },
 ]
 
@@ -85,20 +85,20 @@ export default {
     }),
     methods: {
         corPorStatus(situacao) {
-            if (!situacao) return '#BDBDBD';
+            if (!situacao) return "Black";
             switch (situacao.toLowerCase()) {
                 case "vencido": return "green";
-                case "matricula": return "orange";
-                case "nao vencido": return '#BDBDBD';
-                default: return '#BDBDBD';
+                case "matricula/cursand": return "orange";
+                case "nao vencido": return "Black";
+                default: return "Black";
             }
         },
         status(disciplina) {
             if (!disciplina || !disciplina.Situacao) return { ver: "uncheck", cor: ""};
             switch (disciplina.Situacao.toLowerCase()) {
                 case "vencido": return { ver: "check", cor: "green"};
-                case "não vencido": return { ver: "uncheck", cor: "#FDD835"};
-                case "matrícula": return { ver: "x", cor: ""};
+                case "não vencido": return { ver: "uncheck", cor: "Black"};
+                case "matricula/cursand": return { ver: "", cor: "orange"};
                 default: return { ver: "uncheck", cor: ""};
             }
         },
