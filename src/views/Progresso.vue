@@ -28,7 +28,7 @@ import CurriculoNovo from '../components/CurriculoNovoIntegralizacao.vue';
 
 
 export default {
-    name: "disciplinasCurriculoNovo",
+    name: "progresso",
     data() {
         return {
             disciplinasObrigatorias: curriculoNovoObrigatorias.CurriculoNovo,

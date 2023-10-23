@@ -51,7 +51,7 @@ import CurriculoAtual from '../components/CurriculoAtual.vue';
 
 
 export default {
-    name: "disciplinasCurriculoNovo",
+    name: "migracao",
     data() {
         return {
             disciplinasObrigatoriasCurriculoAntigo: curriculoAntigoObrigatorias.CurriculoAntigo,

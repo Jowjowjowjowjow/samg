@@ -1,13 +1,18 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+
 </script>
 
 <template>
   <v-layout>
     <v-app-bar class="pl-4">
-      <!-- <RouterLink to="/historico">Histórico</RouterLink> -->
+      <ul class="d-flex ma-0 navigation">
+        <li class="mr-2"><RouterLink to="/">Migração</RouterLink></li>
+        <li><RouterLink to="/progresso">Progresso</RouterLink></li>
+      </ul>
       <v-spacer></v-spacer>
-      <v-card-title>Sistema de Apoio à Migração de Grade de BSI (SAMG BSI)</v-card-title>
+      <v-card-title class="non-mobile">Sistema de Apoio à Migração de Grade de BSI (SAMG BSI)</v-card-title>
+      <v-card-title class="mobile">SAMG BSI</v-card-title>
     </v-app-bar>
     <v-main>
       <RouterView />
@@ -53,6 +58,24 @@ nav a:first-of-type {
   border: 0;
 }
 
+.navigation {
+  list-style-type: none;
+  color: black;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: black;
+}
+
+.navigation a{
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -79,4 +102,20 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
+@media (min-width: 768px) {
+  .non-mobile {
+    display: contents !important;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+@media (min-width: 280px) {
+  .non-mobile {
+    display: none;
+  }
+
+}
+
 </style>
