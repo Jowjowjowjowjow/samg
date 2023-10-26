@@ -530,7 +530,7 @@
   "Eixo": null
 },
 {
- "Codigo": "TIN0151",
+ "Codigo": "TIN0306",
  "Nome": "Atividades de Extensão I",
  "CargaHoraria": 150,
  "Creditos": 5,
@@ -542,7 +542,7 @@
  "Eixo": "Atividades de extensão"
 },
 {
- "Codigo": "TIN0152",
+ "Codigo": "TIN0307",
  "Nome": "Atividades de Extensão II",
  "CargaHoraria": 150,
  "Creditos": 5,
@@ -554,7 +554,7 @@
  "Eixo": "Atividades de extensão"
 },
 {
-  "Codigo": "TIN9999",
+  "Codigo": "ATC0060",
   "Nome": "Atividades Complementares",
   "CargaHoraria": null,
   "Creditos": null,
