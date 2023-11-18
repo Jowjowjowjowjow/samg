@@ -1,11 +1,6 @@
 <template>
     <v-container fluid class="historicoIntegralizacao">
         <v-row>
-            <strong class="warning text-h5 text-center">AVISO: este simulador foi elaborado apenas com propósitos
-                informacionais e não deve ser
-                considerado como uma garantia de situação .</strong>
-        </v-row>
-        <v-row>
             <v-col cols="12">
                 <v-file-input
                     label="Usar o histórico emitido no portal do aluno em 'Relatórios >> Histórico Integralização'"
