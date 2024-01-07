@@ -91,7 +91,7 @@ export default {
             return disciplinasCursadas.map(disciplina => {
                 if (disciplina.Tipo?.includes("Optativa")) {
                     const optativa = optativas.shift();
-                    return { ...optativa, PeriodoRecomendado: disciplina.PeriodoRecomendado, Sigla: disciplina.Sigla }
+                    return { ...optativa, PeriodoRecomendado: disciplina.PeriodoRecomendado, Sigla: optativa?.Sigla || disciplina.Sigla }
                 } else return disciplina;
             });
         },
