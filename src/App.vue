@@ -7,8 +7,8 @@ import { RouterLink, RouterView } from 'vue-router'
   <v-layout>
     <v-app-bar class="pl-4">
       <ul class="d-flex ma-0 navigation">
-        <li class="mr-2"><RouterLink to="/">Migração</RouterLink></li>
-        <li><RouterLink to="/progresso">Progresso</RouterLink></li>
+        <li><RouterLink to="/">Migração</RouterLink></li>
+        <li class="ml-4"><RouterLink to="/progresso">Progresso</RouterLink></li>
       </ul>
       <v-spacer></v-spacer>
       <v-card-title class="non-mobile">Sistema de Apoio à Migração de Grade de BSI (SAMG BSI)</v-card-title>
@@ -61,10 +61,24 @@ nav a:first-of-type {
 .navigation {
   list-style-type: none;
   color: black;
+  border-right: 1px solid black;
+  height: 100%;
+  align-items: center;
+  
+}
+
+.navigation li:first-child {
+  border-right: 1px solid black;
+  
+}
+
+.navigation li {
+  padding-right: 14px;
+  height: 100%;
+  padding-top: 16px;
 }
 
 .navigation a:hover {
-  text-decoration: underline;
   background-color: transparent;
   color: black;
 }
@@ -73,6 +87,7 @@ nav a:first-of-type {
   color: black;
   font-size: 18px;
   font-weight: 400;
+  text-decoration: underline;
 }
 
 
