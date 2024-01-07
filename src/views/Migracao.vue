@@ -255,16 +255,16 @@ export default {
             const dispensas = [];
             const utilizadas = [];
             if (disciplinas.length === 4) {
-                dispensas.push("TIN0151", "TIN0152", "ATC0060")
+                dispensas.push("TIN0306", "TIN0307", "ATC0060")
                 utilizadas.push(disciplinas[0].Codigo, disciplinas[1].Codigo, disciplinas[2].Codigo, disciplinas[3].Codigo)
             } else if (disciplinas.length == 3) {
-                dispensas.push("TIN0151", "TIN0152")
+                dispensas.push("TIN0306", "TIN0307")
                 utilizadas.push(disciplinas[0].Codigo, disciplinas[1].Codigo, disciplinas[2].Codigo)
             } else if (disciplinas.length == 2 && disciplinas.some(disciplina => disciplina.Codigo === "TIN0156" || disciplina.Codigo === "TIN0157") && TPD) {
-                dispensas.push("TIN0151", "ATC0060")
+                dispensas.push("TIN0306", "ATC0060")
                 utilizadas.push(disciplinas[0].Codigo, disciplinas[1].Codigo, TPD.Codigo)
             } else if (disciplinas.length >= 1 && TPD) {
-                dispensas.push("TIN0151")
+                dispensas.push("TIN0306")
                 utilizadas.push(...disciplinas.map(disciplina => disciplina.Codigo), TPD.Codigo)
             }
             return [dispensas, utilizadas]
